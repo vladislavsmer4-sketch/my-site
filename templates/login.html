@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вхід</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="login-page">
+
+    <header>
+        <nav>
+            <a href="/">Головна</a>
+            <a href="/about">Про нас</a>
+            <a href="/contacts">Контакти</a>
+
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-box">
+
+            <h1>Вхід</h1>
+
+            <form>
+                <input type="email" placeholder="Email" required>
+
+                <input type="password" placeholder="Пароль" required>
+
+                <button type="submit">Увійти</button>
+            </form>
+
+            <p>
+                Немає акаунта?
+                <a href="/register">Зареєструватися</a>
+            </p>
+
+        </section>
+    </main>
+
+</body>
+
+</html>
