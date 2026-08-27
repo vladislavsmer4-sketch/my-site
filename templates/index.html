@@ -1,105 +1,134 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-<head>
-    <meta charset="Utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0>"
-    <title></title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
+{% block title %}
+    {% if language == "uk" %}
+        Сигарний Дім
+    {% else %}
+        Cigar House
+    {% endif %}
+{% endblock %}
 
-<body>
+{% block content %}
 
-    <header>
-<form class="site-search" action="search.html" method="get">
-    <button class="search-submit" type="submit" aria-label="Шукати">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="11" cy="11" r="7"></circle>
-            <line x1="16" y1="16" x2="21" y2="21"></line>
-        </svg>
-    </button>
+<section class="hero">
 
+    <div class="hero-overlay"></div>
 
-    <input
-        type="search"
-        name="q"
-        placeholder="Пошук товарів"
-    >
-</form>
+    <div class="hero-text">
 
-        <nav>
-<a href="/">Головна</a>
-<a href="/about">Про нас</a>
-<a href="/contacts">Контакти</a>
-<div class="auth-buttons">
+        <p class="subtitle">
+            18+ &nbsp; • &nbsp;
+            {% if language == "uk" %}
+                СИГАРИ ДЛЯ ПОЦІНОВУВАЧІВ
+            {% else %}
+                CIGARS FOR CONNOISSEURS
+            {% endif %}
+        </p>
 
-    <div class="auth-title">
-        ОСОБИСТИЙ КАБІНЕТ
+        <h1>
+            {% if language == "uk" %}
+                Смак.<br>
+                Стиль.<br>
+                Ритуал.
+            {% else %}
+                Taste.<br>
+                Style.<br>
+                Ritual.
+            {% endif %}
+        </h1>
+
+        <p class="description">
+            {% if language == "uk" %}
+                Від перевіреної класики до рідкісних знахідок —
+                обрані сигари та аксесуари для особливих моментів.
+            {% else %}
+                From timeless classics to rare finds —
+                selected cigars and accessories for special moments.
+            {% endif %}
+        </p>
+
+        <a class="hero-button" href="/catalog">
+            {% if language == "uk" %}
+                Переглянути колекцію
+            {% else %}
+                Explore the collection
+            {% endif %}
+        </a>
+
     </div>
 
-    <div class="auth-decoration">
-        ─── ✦ ───
+    <div class="hero-scroll">
+        <span>
+            {% if language == "uk" %}
+                ПЕРЕГЛЯНУТИ КОЛЕКЦІЮ
+            {% else %}
+                EXPLORE THE COLLECTION
+            {% endif %}
+        </span>
+
+        <span class="scroll-line"></span>
     </div>
 
-    <a class="auth-login" href="/login">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="8" r="4"></circle>
-            <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"></path>
-        </svg>
-        Вхід
-    </a>
+</section>
 
-    <a class="auth-register" href="/register">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 3l2.5 5.5L20 11l-5.5 2.5L12 19l-2.5-5.5L4 11l5.5-2.5L12 3z"></path>
-        </svg>
-        Реєстрація
-    </a>
 
-    <div class="auth-subtitle">
-        Увійдіть або створіть акаунт
+<section class="collection-intro">
+
+    <div class="collection-intro-text">
+
+        <span class="section-label">
+            {% if language == "uk" %}
+                НАША КОЛЕКЦІЯ
+            {% else %}
+                OUR COLLECTION
+            {% endif %}
+        </span>
+
+        <h2>
+            {% if language == "uk" %}
+                Сигари, які<br>
+                варто смакувати.
+            {% else %}
+                Cigars worth<br>
+                savouring.
+            {% endif %}
+        </h2>
+
+        <p>
+            {% if language == "uk" %}
+                Ми збираємо колекцію для тих, хто цінує характер,
+                якість і справжній ритуал насолоди.
+                Від класичних ароматів до особливих екземплярів —
+                кожна сигара має свою історію.
+            {% else %}
+                We curate a collection for those who appreciate character,
+                quality and the true ritual of enjoyment.
+                From classic aromas to exceptional pieces —
+                every cigar has its own story.
+            {% endif %}
+        </p>
+
+        <a href="/catalog" class="collection-link">
+            {% if language == "uk" %}
+                Перейти до каталогу →
+            {% else %}
+                Go to catalog →
+            {% endif %}
+        </a>
+
     </div>
 
-</div>
-        </nav>
-        
-    </header>
-<main>
-    <section class="hero">
-        <div class="hero-text">
-            <p class="subtitle">
-                <span>18+</span>
-                <span>ВИБІР</span>
-                <span>З</span>
-                <span>ХАРАКТЕРОМ</span>
-            </p>
 
-               <h1>Смак. Стиль.<br>Ритуал.</h1>
+    <div class="collection-intro-image">
 
-            <p class="description">
-                <span>Від</span>
-                <span>перевіреної</span>
-                <span>класики</span>
-                <span>до</span>
-                <span>рідкісних</span>
-                <span>знахідок</span>
-                <span>—</span>
-                <span>тютюнові</span>
-                <span>вироби</span>
-                <span>та</span>
-                <span>аксесуари</span>
-                <span>для</span>
-                <span>особливих</span>
-                <span>моментів.</span>
-            </p>
+        <img
+            src="/static/images/photo%206.jpg"
+            alt="{% if language == 'uk' %}Колекція сигар{% else %}Cigar collection{% endif %}"
+        >
 
-        </div>
+    </div>
 
-    </section>
+</section>
 
-</main>
-
-
-</body>
-
-</html>
+{% endblock %}
+```

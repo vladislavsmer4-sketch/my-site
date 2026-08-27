@@ -1,46 +1,84 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вхід</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
+{% block body_class %}login-page{% endblock %}
 
-<body class="login-page">
+{% block title %}
+    {% if language == "uk" %}
+        Вхід — Сигарний Дім
+    {% else %}
+        Login — Cigar House
+    {% endif %}
+{% endblock %}
 
-    <header>
-        <nav>
-            <a href="/">Головна</a>
-            <a href="/about">Про нас</a>
-            <a href="/contacts">Контакти</a>
+{% block content %}
 
+<section class="auth-box">
 
-        </nav>
-    </header>
+    {% if language == "uk" %}
 
-    <main>
-        <section class="auth-box">
+        <h1>Вхід</h1>
 
-            <h1>Вхід</h1>
+        <form method="POST" action="/login">
 
-            <form>
-                <input type="email" placeholder="Email" required>
+            <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+            >
 
-                <input type="password" placeholder="Пароль" required>
+            <input
+                type="password"
+                name="password"
+                placeholder="Пароль"
+                required
+            >
 
-                <button type="submit">Увійти</button>
-            </form>
+            <button type="submit">
+                Увійти
+            </button>
 
-            <p>
-                Немає акаунта?
-                <a href="/register">Зареєструватися</a>
-            </p>
+        </form>
 
-        </section>
-    </main>
+        <p>
+            Немає акаунта?
+            <a href="/register">Зареєструватися</a>
+        </p>
 
-</body>
+    {% else %}
 
-</html>
+        <h1>Login</h1>
+
+        <form method="POST" action="/login">
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+            >
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+            >
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+        <p>
+            Don't have an account?
+            <a href="/register">Register</a>
+        </p>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}
+```

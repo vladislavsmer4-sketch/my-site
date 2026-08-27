@@ -1,56 +1,15 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
+{% block body_class %}about-page{% endblock %}
 
-<body class="about-page">
+{% block title %}Про нас — Сигарний дім{% endblock %}
 
-    <header>
+{% block content %}
 
-        <nav>
-            <a href="/">Головна</a>
-            <a href="/about">Про нас</a>
-            <a href="/contacts">Контакти</a>
+<main class="about-content">
 
-            <div class="auth-buttons">
+    <!-- Тут пізніше буде інформація про Сигарний дім -->
 
-    <div class="auth-title">
-        ОСОБИСТИЙ КАБІНЕТ
-    </div>
+</main>
 
-    <div class="auth-decoration">
-        ─── ✦ ───
-    </div>
-
-    <a class="auth-login" href="/login">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="8" r="4"></circle>
-            <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"></path>
-        </svg>
-        Вхід
-    </a>
-
-    <a class="auth-register" href="/register">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 3l2.5 5.5L20 11l-5.5 2.5L12 19l-2.5-5.5L4 11l5.5-2.5L12 3z"></path>
-        </svg>
-        Реєстрація
-    </a>
-
-    <div class="auth-subtitle">
-        Увійдіть або створіть акаунт
-    </div>
-
-</div>
-        </nav>
-
-    </header>
-
-</body>
-
-</html>
+{% endblock %}

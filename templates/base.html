@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="{{ 'uk' if language == 'uk' else 'en' }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+            {% if language == "uk" %}
+                Сигарний Дім
+            {% else %}
+                Cigar House
+            {% endif %}
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+    <!-- ШАПКА САЙТУ -->
+    <header class="main-header">
+
+        <div class="brand">
+            <a href="/">
+                {% if language == "uk" %}
+                    СИГАРНИЙ ДІМ
+                {% else %}
+                    CIGAR HOUSE
+                {% endif %}
+            </a>
+        </div>
+
+        <nav class="main-nav">
+
+            {% if request.path != "/" %}
+                <a href="/">
+                    {% if language == "uk" %}Головна{% else %}Home{% endif %}
+                </a>
+            {% endif %}
+
+            {% if request.path != "/categories" %}
+                <a href="/categories">
+                    {% if language == "uk" %}Категорії{% else %}Categories{% endif %}
+                </a>
+            {% endif %}
+
+            {% if request.path != "/catalog" %}
+                <a href="/catalog">
+                    {% if language == "uk" %}Каталог{% else %}Catalog{% endif %}
+                </a>
+            {% endif %}
+
+            {% if request.path != "/about" %}
+                <a href="/about">
+                    {% if language == "uk" %}Про нас{% else %}About us{% endif %}
+                </a>
+            {% endif %}
+
+            {% if request.path != "/contacts" %}
+                <a href="/contacts">
+                    {% if language == "uk" %}Контакти{% else %}Contacts{% endif %}
+                </a>
+            {% endif %}
+
+        </nav>
+
+        <div class="header-actions">
+
+            <!-- МОВА -->
+            <div class="language-switcher">
+
+                <button type="button" class="language-button">
+                    {{ "UA" if language == "uk" else "EN" }}
+                </button>
+
+                <div class="language-menu">
+                    <a href="/set-language/uk"
+                       class="{% if language == 'uk' %}active{% endif %}">
+                        UA
+                    </a>
+
+                    <a href="/set-language/en"
+                       class="{% if language == 'en' %}active{% endif %}">
+                        EN
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- КОШИК -->
+            <a href="/cart"
+               class="cart-link"
+               aria-label="{{ 'Кошик' if language == 'uk' else 'Cart' }}">
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L21 8H6"></path>
+                    <circle cx="10" cy="20" r="1"></circle>
+                    <circle cx="18" cy="20" r="1"></circle>
+                </svg>
+
+                <span class="cart-count">0</span>
+
+            </a>
+
+            <!-- ПОШУК -->
+            <form class="site-search" action="/search" method="get">
+
+                <button class="search-submit"
+                        type="submit"
+                        aria-label="{{ 'Пошук' if language == 'uk' else 'Search' }}">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <line x1="16" y1="16"
+                              x2="21" y2="21"></line>
+                    </svg>
+
+                </button>
+
+                <input
+                    type="search"
+                    name="q"
+                    placeholder="{{ 'Пошук товарів' if language == 'uk' else 'Search products' }}"
+                >
+
+            </form>
+
+            <!-- ОСОБИСТИЙ КАБІНЕТ -->
+            <a class="cabinet-link" href="/login">
+                {% if language == "uk" %}
+                    Особистий кабінет
+                {% else %}
+                    My account
+                {% endif %}
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ВМІСТ КОНКРЕТНОЇ СТОРІНКИ -->
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
+```

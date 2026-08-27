@@ -1,0 +1,191 @@
+{% extends "base.html" %}
+
+{% block body_class %}categories-page{% endblock %}
+
+{% block title %}
+    {% if language == "en" %}
+        Categories — Cigar House
+    {% else %}
+        Категорії — Сигарний дім
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+
+<main class="categories-content">
+
+    <section class="categories-hero">
+
+        <span class="section-label">
+            {% if language == "en" %}
+                OUR COLLECTION
+            {% else %}
+                НАША КОЛЕКЦІЯ
+            {% endif %}
+        </span>
+
+        <h1>
+            {% if language == "en" %}
+                Choose your<br>
+                format.
+            {% else %}
+                Оберіть свій<br>
+                формат.
+            {% endif %}
+        </h1>
+
+        <p>
+            {% if language == "en" %}
+                From classic cigars to accessories —
+                find what will complement your ritual.
+            {% else %}
+                Від класичних сигар до аксесуарів —
+                знайдіть те, що доповнить ваш ритуал.
+            {% endif %}
+        </p>
+
+    </section>
+
+
+    <section class="categories-grid">
+
+        <!-- СИГАРИ -->
+
+        <a href="/catalog?category=cigars"
+           class="category-card">
+
+            <div class="category-image">
+                <img
+                    src="/static/images/photo%207.jpg"
+                    alt="{% if language == 'en' %}Cigars{% else %}Сигари{% endif %}">
+            </div>
+
+            <div class="category-info">
+                <span>01</span>
+
+                <h2>
+                    {% if language == "en" %}
+                        Cigars
+                    {% else %}
+                        Сигари
+                    {% endif %}
+                </h2>
+
+                <p>
+                    {% if language == "en" %}
+                        View collection →
+                    {% else %}
+                        Переглянути колекцію →
+                    {% endif %}
+                </p>
+            </div>
+
+        </a>
+
+
+        <!-- ТЮТЮН -->
+
+        <a href="/catalog?category=tobacco"
+           class="category-card">
+
+            <div class="category-image">
+                <img
+                    src="/static/images/photo%208.jpg"
+                    alt="{% if language == 'en' %}Tobacco{% else %}Тютюн{% endif %}">
+            </div>
+
+            <div class="category-info">
+                <span>02</span>
+
+                <h2>
+                    {% if language == "en" %}
+                        Tobacco
+                    {% else %}
+                        Тютюн
+                    {% endif %}
+                </h2>
+
+                <p>
+                    {% if language == "en" %}
+                        View collection →
+                    {% else %}
+                        Переглянути колекцію →
+                    {% endif %}
+                </p>
+            </div>
+
+        </a>
+
+
+        <!-- АКСЕСУАРИ -->
+
+        <a href="/catalog?category=accessories"
+           class="category-card">
+
+            <div class="category-image">
+                <img
+                    src="/static/images/photo%209.jpg"
+                    alt="{% if language == 'en' %}Accessories{% else %}Аксесуари{% endif %}">
+            </div>
+
+            <div class="category-info">
+                <span>03</span>
+
+                <h2>
+                    {% if language == "en" %}
+                        Accessories
+                    {% else %}
+                        Аксесуари
+                    {% endif %}
+                </h2>
+
+                <p>
+                    {% if language == "en" %}
+                        View collection →
+                    {% else %}
+                        Переглянути колекцію →
+                    {% endif %}
+                </p>
+            </div>
+
+        </a>
+
+
+        <!-- ПОДАРУНКОВІ НАБОРИ -->
+
+        <a href="/catalog?category=sets"
+           class="category-card">
+
+            <div class="category-image">
+                <img
+                    src="/static/images/photo%2010.jpg"
+                    alt="{% if language == 'en' %}Gift sets{% else %}Подарункові набори{% endif %}">
+            </div>
+
+            <div class="category-info">
+                <span>04</span>
+
+                <h2>
+                    {% if language == "en" %}
+                        Gift sets
+                    {% else %}
+                        Подарункові набори
+                    {% endif %}
+                </h2>
+
+                <p>
+                    {% if language == "en" %}
+                        View collection →
+                    {% else %}
+                        Переглянути колекцію →
+                    {% endif %}
+                </p>
+            </div>
+
+        </a>
+
+    </section>
+
+</main>
+
+{% endblock %}

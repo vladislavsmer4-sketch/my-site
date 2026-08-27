@@ -1,68 +1,46 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакти</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
+{% block body_class %}contacts-page{% endblock %}
 
-<body class="contacts-page">
+{% block title %}
+    {% if language == "en" %}
+        Contacts — Cigar House
+    {% else %}
+        Контакти — Сигарний дім
+    {% endif %}
+{% endblock %}
 
-    <header>
- <nav>
-    <a href="/">Головна</a>
-    <a href="/about">Про нас</a>
-    <a href="/contacts">Контакти</a>
-<div class="auth-buttons">
+{% block content %}
 
-    <div class="auth-title">
-        ОСОБИСТИЙ КАБІНЕТ
-    </div>
+<section class="contacts">
 
-    <div class="auth-decoration">
-        ─── ✦ ───
-    </div>
+    {% if language == "en" %}
 
-    <a class="auth-login" href="/login">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="8" r="4"></circle>
-            <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"></path>
-        </svg>
-        Вхід
-    </a>
+        <h1>Contacts</h1>
 
-    <a class="auth-register" href="/register">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 3l2.5 5.5L20 11l-5.5 2.5L12 19l-2.5-5.5L4 11l5.5-2.5L12 3z"></path>
-        </svg>
-        Реєстрація
-    </a>
+        <p>Get in touch with us</p>
 
-    <div class="auth-subtitle">
-        Увійдіть або створіть акаунт
-    </div>
+        <div class="contact-info">
+            <p>📞 Phone: +380 XX XXX XX XX</p>
+            <p>✉️ Email: example@gmail.com</p>
+            <p>📍 Address:</p>
+        </div>
 
-</div>
+    {% else %}
 
-</nav>
-    </header>
+        <h1>Контакти</h1>
 
-    <main>
-        <section class="contacts">
-            <h1>Контакти</h1>
+        <p>Зв'яжіться з нами</p>
 
-            <p>Зв'яжіться з нами</p>
+        <div class="contact-info">
+            <p>📞 Телефон: +380 XX XXX XX XX</p>
+            <p>✉️ Email: example@gmail.com</p>
+            <p>📍 Адреса:</p>
+        </div>
 
-            <div class="contact-info">
-                <p>📞 Телефон: +380 XX XXX XX XX</p>
-                <p>✉️ Email: example@gmail.com</p>
-                <p>📍 Адреса: </p>
-            </div>
-        </section>
-    </main>
+    {% endif %}
 
-</body>
+</section>
 
-</html>
+{% endblock %}
+```

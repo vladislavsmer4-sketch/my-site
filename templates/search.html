@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пошук</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="/">Головна</a>
+            <a href="/about">Про нас</a>
+            <a href="/contacts">Контакти</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="search-results">
+
+            <h1>Результати пошуку</h1>
+
+                    {% if query %}
+    <p>Ви шукаєте: <strong>{{ query }}</strong></p>
+
+                    {% if results %}
+        <div class="search-products">
+
+            {% for product in results %}
+                <div class="product">
+                    <h2>{{ product.name }}</h2>
+                    <p>{{ product.price }} грн</p>
+                </div>
+                    {% endfor %}
+
+                </div>
+                    {% else %}
+        <p>Товарів за вашим запитом не знайдено.</p>
+                    {% endif %}
+
+                    {% else %}
+        <p>Введіть назву товару для пошуку.</p>
+                    {% endif %}
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,49 +1,112 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Реєстрація</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
+{% block body_class %}register-page{% endblock %}
 
-<body class="register-page">
+{% block title %}
+    {% if language == "uk" %}
+        Реєстрація — Сигарний Дім
+    {% else %}
+        Registration — Cigar House
+    {% endif %}
+{% endblock %}
 
-    <header>
-        <nav>
-            <a href="/">Головна</a>
-            <a href="/about">Про нас</a>
-            <a href="/contacts">Контакти</a>
+{% block content %}
 
-        </nav>
-    </header>
+<section class="auth-box">
 
-    <main>
-        <section class="auth-box">
+    {% if language == "uk" %}
 
-            <h1>Реєстрація</h1>
+        <h1>Реєстрація</h1>
 
-            <form>
-                <input type="text" placeholder="Ім'я" required>
+        <form method="POST" action="/register">
 
-                <input type="email" placeholder="Email" required>
+            <input
+                type="text"
+                name="name"
+                placeholder="Ім'я"
+                required
+            >
 
-                <input type="password" placeholder="Пароль" required>
+            <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+            >
 
-                <input type="password" placeholder="Повторіть пароль" required>
+            <input
+                type="password"
+                name="password"
+                placeholder="Пароль"
+                required
+            >
 
-                <button type="submit">Зареєструватися</button>
-            </form>
+            <input
+                type="password"
+                name="password_confirm"
+                placeholder="Підтвердіть пароль"
+                required
+            >
 
-            <p>
-                Вже є акаунт?
-                <a href="/login">Увійти</a>
-            </p>
+            <button type="submit">
+                Зареєструватися
+            </button>
 
-        </section>
-    </main>
+        </form>
 
-</body>
+        <p>
+            Вже маєте акаунт?
+            <a href="/login">Увійти</a>
+        </p>
 
-</html>
+    {% else %}
+
+        <h1>Registration</h1>
+
+        <form method="POST" action="/register">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+            >
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+            >
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+            >
+
+            <input
+                type="password"
+                name="password_confirm"
+                placeholder="Confirm password"
+                required
+            >
+
+            <button type="submit">
+                Register
+            </button>
+
+        </form>
+
+        <p>
+            Already have an account?
+            <a href="/login">Login</a>
+        </p>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}
+```
