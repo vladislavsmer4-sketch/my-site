@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {% if language == "uk" %}
+        Кошик — Сигарний Дім
+    {% else %}
+        Cart — Cigar House
+    {% endif %}
+{% endblock %}
+
+{% block body_class %}
+    cart-page
+{% endblock %}
+
+{% block content %}
+
+<section class="cart">
+
+    <div class="cart-header">
+
+        <span class="section-label">
+            {% if language == "uk" %}
+                ВАШЕ ЗАМОВЛЕННЯ
+            {% else %}
+                YOUR ORDER
+            {% endif %}
+        </span>
+
+        <h1>
+            {% if language == "uk" %}
+                Кошик
+            {% else %}
+                Cart
+            {% endif %}
+        </h1>
+
+    </div>
+
+
+    {% if cart_products %}
+
+        <div class="cart-items">
+
+            {% for item in cart_products %}
+
+                <div class="cart-item">
+
+                    <div class="cart-item-info">
+
+                        <span class="cart-item-category">
+                            {% if language == "uk" %}
+                                ТОВАР
+                            {% else %}
+                                PRODUCT
+                            {% endif %}
+                        </span>
+
+                        <h2>
+                            {{ item.name }}
+                        </h2>
+
+                        <p>
+                            {% if language == "uk" %}
+                                Ціна: {{ item.price }} грн
+                            {% else %}
+                                Price: {{ item.price }} UAH
+                            {% endif %}
+                        </p>
+
+                    </div>
+
+
+                    <div class="cart-item-price">
+
+                        <div class="cart-quantity">
+
+                            <form
+                                action="/decrease-cart/{{ item.id }}"
+                                method="post"
+                            >
+                                <button type="submit">−</button>
+                            </form>
+
+                            <span>
+                                {{ item.quantity }}
+                            </span>
+
+                            <form
+                                action="/increase-cart/{{ item.id }}"
+                                method="post"
+                            >
+                                <button type="submit">+</button>
+                            </form>
+
+                        </div>
+
+
+                        <div class="cart-item-total">
+                            {{ item.total }} грн
+                        </div>
+
+
+                        <form
+                            action="/remove-from-cart/{{ item.id }}"
+                            method="post"
+                        >
+
+                            <button type="submit">
+
+                                {% if language == "uk" %}
+                                    Видалити
+                                {% else %}
+                                    Remove
+                                {% endif %}
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+
+        <div class="cart-total">
+
+            <span>
+                {% if language == "uk" %}
+                    Разом
+                {% else %}
+                    Total
+                {% endif %}
+            </span>
+
+            <strong>
+                {{ total }} грн
+            </strong>
+
+        </div>
+
+
+        <div class="cart-actions">
+
+            <a href="/catalog" class="cart-continue">
+                {% if language == "uk" %}
+                    ← Продовжити покупки
+                {% else %}
+                    ← Continue shopping
+                {% endif %}
+            </a>
+
+
+            <a href="/checkout" class="checkout-button">
+
+                {% if language == "uk" %}
+                    Оформити замовлення
+                {% else %}
+                    Checkout
+                {% endif %}
+
+            </a>
+
+
+            <form action="/clear-cart" method="post">
+
+                <button type="submit">
+
+                    {% if language == "uk" %}
+                        Очистити кошик
+                    {% else %}
+                        Clear cart
+                    {% endif %}
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+    {% else %}
+
+        <div class="empty-cart">
+
+            <h2>
+                {% if language == "uk" %}
+                    Ваш кошик порожній
+                {% else %}
+                    Your cart is empty
+                {% endif %}
+            </h2>
+
+            <p>
+                {% if language == "uk" %}
+                    Додайте товари з каталогу, щоб оформити замовлення.
+                {% else %}
+                    Add products from the catalog to place an order.
+                {% endif %}
+            </p>
+
+            <a href="/catalog" class="hero-button">
+
+                {% if language == "uk" %}
+                    Перейти до каталогу
+                {% else %}
+                    Go to catalog
+                {% endif %}
+
+            </a>
+
+        </div>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}

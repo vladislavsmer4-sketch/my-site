@@ -1,0 +1,346 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {% if language == "uk" %}
+        Каталог — Сигарний Дім
+    {% else %}
+        Catalog — Cigar House
+    {% endif %}
+{% endblock %}
+
+{% block body_class %}
+    catalog-page
+{% endblock %}
+
+{% block content %}
+
+<section class="catalog">
+
+    <!-- ЗАГОЛОВОК -->
+    <div class="catalog-header">
+
+        <span class="section-label">
+            {% if language == "uk" %}
+                НАША КОЛЕКЦІЯ
+            {% else %}
+                OUR COLLECTION
+            {% endif %}
+        </span>
+
+        <h1>
+            {% if language == "uk" %}
+                Каталог
+            {% else %}
+                Catalog
+            {% endif %}
+        </h1>
+
+        <p>
+            {% if language == "uk" %}
+                Обрані сигари для тих, хто цінує якість,
+                характер та справжній ритуал.
+            {% else %}
+                Selected cigars for those who appreciate
+                quality, character and the true ritual.
+            {% endif %}
+        </p>
+
+    </div>
+
+
+    <!-- ТОВАРИ -->
+    <div class="catalog-grid">
+
+
+        <!-- ТОВАР 1 -->
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="/static/images/photo%2012.jpg"
+                    alt="Premium Cigar"
+                >
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    {% if language == "uk" %}
+                        СИГАРИ
+                    {% else %}
+                        CIGARS
+                    {% endif %}
+                </span>
+
+                <h2>
+                    Premium Cigar
+                </h2>
+
+                <p>
+                    {% if language == "uk" %}
+                        Витримана сигара з насиченим ароматом.
+                    {% else %}
+                        Aged cigar with a rich and refined aroma.
+                    {% endif %}
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="product-price">
+                        850 грн
+                    </span>
+
+                    <form action="/add-to-cart/1" method="post">
+
+                        <input
+                            type="hidden"
+                            name="name"
+                            value="Premium Cigar"
+                        >
+
+                        <input
+                            type="hidden"
+                            name="price"
+                            value="850"
+                        >
+
+                        <button
+                            type="submit"
+                            class="add-to-cart"
+                        >
+                            {% if language == "uk" %}
+                                Додати
+                            {% else %}
+                                Add
+                            {% endif %}
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ТОВАР 2 -->
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="/static/images/photo%2013.jpg"
+                    alt="Havana Reserve"
+                >
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    {% if language == "uk" %}
+                        СИГАРИ
+                    {% else %}
+                        CIGARS
+                    {% endif %}
+                </span>
+
+                <h2>
+                    Havana Reserve
+                </h2>
+
+                <p>
+                    {% if language == "uk" %}
+                        Класичний смак та глибокий аромат.
+                    {% else %}
+                        Classic taste with a deep and elegant aroma.
+                    {% endif %}
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="product-price">
+                        1 200 грн
+                    </span>
+
+                    <form action="/add-to-cart/2" method="post">
+
+                        <input
+                            type="hidden"
+                            name="name"
+                            value="Havana Reserve"
+                        >
+
+                        <input
+                            type="hidden"
+                            name="price"
+                            value="1200"
+                        >
+
+                        <button
+                            type="submit"
+                            class="add-to-cart"
+                        >
+                            {% if language == "uk" %}
+                                Додати
+                            {% else %}
+                                Add
+                            {% endif %}
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ТОВАР 3 -->
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="/static/images/photo%2014.jpg"
+                    alt="Royal Collection"
+                >
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    {% if language == "uk" %}
+                        СИГАРИ
+                    {% else %}
+                        CIGARS
+                    {% endif %}
+                </span>
+
+                <h2>
+                    Royal Collection
+                </h2>
+
+                <p>
+                    {% if language == "uk" %}
+                        Преміальна сигара для особливих моментів.
+                    {% else %}
+                        A premium cigar for special occasions.
+                    {% endif %}
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="product-price">
+                        1 500 грн
+                    </span>
+
+                    <form action="/add-to-cart/3" method="post">
+                        <input
+                            type="hidden"
+                            name="name"
+                            value="Royal Collection"
+                        >
+
+                        <input
+                            type="hidden"
+                            name="price"
+                            value="1500"
+                        >
+
+                        <button
+                            type="submit"
+                            class="add-to-cart"
+                        >
+                            {% if language == "uk" %}
+                                Додати
+                            {% else %}
+                                Add
+                            {% endif %}
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- ТОВАР 4 -->
+        <article class="product-card">
+
+            <div class="product-image">
+                <img
+                    src="/static/images/photo%2015.jpg"
+                    alt="Black Label"
+                >
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    {% if language == "uk" %}
+                        СИГАРИ
+                    {% else %}
+                        CIGARS
+                    {% endif %}
+                </span>
+
+                <h2>
+                    Black Label
+                </h2>
+
+                <p>
+                    {% if language == "uk" %}
+                        Насичений смак та довгий післясмак.
+                    {% else %}
+                        Rich taste with a long and memorable finish.
+                    {% endif %}
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="product-price">
+                        1 050 грн
+                    </span>
+
+                    <form action="/add-to-cart/4" method="post">
+
+                        <input
+                            type="hidden"
+                            name="name"
+                            value="Black Label"
+                        >
+
+                        <input
+                            type="hidden"
+                            name="price"
+                            value="1050"
+                        >
+
+                        <button
+                            type="submit"
+                            class="add-to-cart"
+                        >
+                            {% if language == "uk" %}
+                                Додати
+                            {% else %}
+                                Add
+                            {% endif %}
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {% if language == "uk" %}
+        Замовлення оформлено — Сигарний Дім
+    {% else %}
+        Order completed — Cigar House
+    {% endif %}
+{% endblock %}
+
+{% block body_class %}
+    order-success-page
+{% endblock %}
+
+{% block content %}
+
+<section class="order-success">
+
+    <div class="order-success-content">
+
+        <span class="section-label">
+            {% if language == "uk" %}
+                ДЯКУЄМО
+            {% else %}
+                THANK YOU
+            {% endif %}
+        </span>
+
+
+        <h1>
+            {% if language == "uk" %}
+                Замовлення оформлено
+            {% else %}
+                Order completed
+            {% endif %}
+        </h1>
+
+
+        <p>
+            {% if language == "uk" %}
+                Дякуємо за ваше замовлення.
+                Ми зв'яжемося з вами найближчим часом
+                для підтвердження деталей.
+            {% else %}
+                Thank you for your order.
+                We will contact you shortly
+                to confirm the details.
+            {% endif %}
+        </p>
+
+
+        {% if order %}
+
+            <div class="order-details">
+
+                <h2>
+                    {% if language == "uk" %}
+                        Деталі замовлення
+                    {% else %}
+                        Order details
+                    {% endif %}
+                </h2>
+
+
+                <div class="order-customer">
+
+                    <p>
+                        <strong>
+                            {% if language == "uk" %}
+                                Ім'я:
+                            {% else %}
+                                Name:
+                            {% endif %}
+                        </strong>
+
+                        {{ order.name }}
+                    </p>
+
+
+                    <p>
+                        <strong>
+                            {% if language == "uk" %}
+                                Телефон:
+                            {% else %}
+                                Phone:
+                            {% endif %}
+                        </strong>
+
+                        {{ order.phone }}
+                    </p>
+
+
+                    {% if order.email %}
+
+                        <p>
+                            <strong>Email:</strong>
+                            {{ order.email }}
+                        </p>
+
+                    {% endif %}
+
+
+                    <p>
+                        <strong>
+                            {% if language == "uk" %}
+                                Місто:
+                            {% else %}
+                                City:
+                            {% endif %}
+                        </strong>
+
+                        {{ order.city }}
+                    </p>
+
+
+                    <p>
+                        <strong>
+                            {% if language == "uk" %}
+                                Адреса:
+                            {% else %}
+                                Address:
+                            {% endif %}
+                        </strong>
+
+                        {{ order.address }}
+                    </p>
+
+                </div>
+
+
+                <div class="order-products">
+
+                    {% for item in order.cart_products %}
+
+                        <div class="order-product">
+
+                            <span>
+                                {{ item.name }}
+                                × {{ item.quantity }}
+                            </span>
+
+                            <strong>
+                                {{ item.total }} грн
+                            </strong>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+
+                <div class="order-total">
+
+                    <span>
+                        {% if language == "uk" %}
+                            Разом
+                        {% else %}
+                            Total
+                        {% endif %}
+                    </span>
+
+                    <strong>
+                        {{ order.total }} грн
+                    </strong>
+
+                </div>
+
+            </div>
+
+        {% endif %}
+
+
+        <div class="order-success-actions">
+
+            <a href="/catalog" class="hero-button">
+
+                {% if language == "uk" %}
+                    Повернутися до каталогу
+                {% else %}
+                    Back to catalog
+                {% endif %}
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
