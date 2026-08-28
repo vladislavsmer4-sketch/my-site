@@ -18,9 +18,12 @@ body {
     margin: 0;
     min-height: 100vh;
     width: 100%;
+
     color: white;
     font-family: Arial, sans-serif;
+
     background: #111;
+
     overflow-x: hidden;
 }
 
@@ -42,14 +45,17 @@ img {
     margin-top: 40px;
     width: 100%;
     min-height: 80px;
+
     padding: 15px 5%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 30px;
 
     background: rgba(15, 12, 10, 0.92);
+
     border-bottom: 1px solid rgba(216, 196, 166, 0.35);
 
     position: relative;
@@ -62,37 +68,55 @@ img {
 
 .brand a {
     color: #d8c4a6;
+
     text-decoration: none;
+
     font-size: 22px;
     font-weight: bold;
+
     letter-spacing: 4px;
+
     white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+.brand a:hover {
+    color: #fff;
 }
 
 .main-nav {
     display: flex;
     align-items: center;
     justify-content: center;
+
     gap: 30px;
 }
 
 .main-nav a {
     color: #e6d5bd;
+
     text-decoration: none;
+
     font-size: 15px;
-    transition: 0.3s;
+
     white-space: nowrap;
+
+    transition: 0.3s;
 }
 
 .main-nav a:hover {
-    color: #d8c4a6;
+    color: #fff;
 }
 
 .header-actions {
     display: flex;
     flex-direction: row;
+
     align-items: center;
+
     gap: 15px;
+
     flex-wrap: nowrap;
     flex-shrink: 0;
 }
@@ -104,13 +128,17 @@ img {
 
 .cabinet-link {
     color: #d8c4a6;
+
     text-decoration: none;
+
     font-size: 13px;
+
     white-space: nowrap;
 
     padding: 10px 15px;
 
     border: 1px solid rgba(216, 196, 166, 0.5);
+
     border-radius: 5px;
 
     transition: 0.3s;
@@ -136,6 +164,7 @@ img {
     background: #222;
 
     border: 1px solid #d8c4a6;
+
     border-radius: 21px;
 
     overflow: hidden;
@@ -162,6 +191,7 @@ img {
     justify-content: center;
 
     background: transparent;
+
     border: none;
 
     cursor: pointer;
@@ -177,7 +207,9 @@ img {
     height: 21px;
 
     fill: none;
+
     stroke: #d8c4a6;
+
     stroke-width: 2;
 }
 
@@ -188,9 +220,11 @@ img {
     padding: 0;
 
     color: white;
+
     font-size: 14px;
 
     background: transparent;
+
     border: none;
     outline: none;
 
@@ -204,7 +238,9 @@ img {
 
 .site-search:focus-within input {
     width: 100%;
+
     padding: 10px;
+
     opacity: 1;
 }
 
@@ -219,6 +255,7 @@ img {
 
 .language-switcher {
     position: relative;
+
     flex-shrink: 0;
 }
 
@@ -228,17 +265,21 @@ img {
     padding: 8px 10px;
 
     background: transparent;
+
     color: #d8c4a6;
 
     border: 1px solid rgba(216, 196, 166, 0.5);
+
     border-radius: 5px;
 
     font-size: 12px;
+
     cursor: pointer;
 }
 
 .language-button:hover {
     background: rgba(216, 196, 166, 0.15);
+
     transform: none;
 }
 
@@ -248,16 +289,19 @@ img {
     position: absolute;
 
     top: calc(100% + 8px);
+
     left: 50%;
 
     transform: translateX(-50%);
 
     min-width: 60px;
+
     padding: 6px;
 
     background: #17120f;
 
     border: 1px solid rgba(216, 196, 166, 0.5);
+
     border-radius: 6px;
 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
@@ -267,6 +311,7 @@ img {
 
 .language-switcher.open .language-menu {
     display: flex;
+
     flex-direction: column;
 }
 
@@ -274,27 +319,31 @@ img {
     padding: 7px 10px;
 
     color: #d8c4a6;
+
     text-decoration: none;
 
     font-size: 12px;
+
     text-align: center;
 }
 
 .language-menu a:hover,
 .language-menu a.active {
     color: #fff;
+
     background: rgba(216, 196, 166, 0.15);
 }
 
 
 /* =========================================================
-   КОШИК
+   КОШИК У ШАПЦІ
 ========================================================= */
 
 .cart-link {
     position: relative;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -302,9 +351,11 @@ img {
     height: 42px;
 
     color: #d8c4a6;
+
     text-decoration: none;
 
     border: 1px solid rgba(216, 196, 166, 0.5);
+
     border-radius: 50%;
 
     flex-shrink: 0;
@@ -314,6 +365,7 @@ img {
 
 .cart-link:hover {
     background: rgba(216, 196, 166, 0.15);
+
     transform: translateY(-2px);
 }
 
@@ -322,7 +374,9 @@ img {
     height: 21px;
 
     fill: none;
+
     stroke: currentColor;
+
     stroke-width: 1.7;
 }
 
@@ -336,17 +390,20 @@ img {
     height: 18px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     padding: 0 4px;
 
     background: #d8c4a6;
+
     color: #17120f;
 
     border-radius: 50%;
 
     font-size: 10px;
+
     font-weight: bold;
 }
 
@@ -363,6 +420,7 @@ img {
     padding: 100px 8%;
 
     display: flex;
+
     align-items: center;
 
     overflow: hidden;
@@ -383,17 +441,23 @@ img {
 
 .hero .subtitle {
     display: inline-flex;
+
     align-items: center;
+
     gap: 10px;
 
     color: #d8c4a6;
 
     font-size: 11px;
+
     font-weight: 600;
+
     letter-spacing: 3.5px;
+
     text-transform: uppercase;
 
     margin-bottom: 28px;
+
     padding-bottom: 10px;
 
     border-bottom: 1px solid rgba(216, 196, 166, 0.45);
@@ -404,12 +468,17 @@ img {
 .hero h1 {
     color: #f1e7d8;
 
-    font-family: "Segoe Script", "Brush Script MT", cursive;
+    font-family:
+        "Segoe Script",
+        "Brush Script MT",
+        cursive;
 
     font-size: clamp(64px, 7vw, 105px);
 
     font-weight: 400;
+
     line-height: 0.9;
+
     letter-spacing: 3px;
 
     margin-bottom: 35px;
@@ -425,7 +494,9 @@ img {
     color: #e3d7c7;
 
     font-size: 17px;
+
     line-height: 1.8;
+
     letter-spacing: 0.3px;
 
     margin-bottom: 35px;
@@ -441,21 +512,27 @@ img {
     display: inline-flex;
 
     align-items: center;
+
     gap: 14px;
 
     padding: 16px 28px;
 
     color: #f1e7d8;
+
     background: rgba(216, 196, 166, 0.08);
 
     border: 1px solid rgba(216, 196, 166, 0.7);
+
     border-radius: 2px;
 
     text-decoration: none;
+
     text-transform: uppercase;
 
     letter-spacing: 2.5px;
+
     font-size: 12px;
+
     font-weight: 600;
 
     transition: all 0.35s ease;
@@ -471,6 +548,7 @@ img {
 
 .hero-button:hover {
     background: transparent;
+
     color: #d8c4a6;
 
     transform: translateY(-2px);
@@ -482,6 +560,7 @@ img {
 
 .hero-overlay {
     position: absolute;
+
     inset: 0;
 
     background:
@@ -504,10 +583,19 @@ img {
 .register-page {
     background-color: #111;
 
-    background-image: url("/static/images/photo%204.jpg");
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.7)
+        ),
+        url("/static/images/photo%204.jpg");
+
     background-size: cover;
+
     background-position: center;
+
     background-repeat: no-repeat;
+
     background-attachment: fixed;
 }
 
@@ -518,6 +606,7 @@ img {
 
 .auth-box {
     width: 400px;
+
     max-width: calc(100% - 30px);
 
     margin: 100px auto;
@@ -527,6 +616,7 @@ img {
     background: rgba(0, 0, 0, 0.65);
 
     border: 1px solid rgba(216, 196, 166, 0.4);
+
     border-radius: 12px;
 
     text-align: center;
@@ -544,7 +634,9 @@ img {
 
 .auth-box form {
     display: flex;
+
     flex-direction: column;
+
     gap: 15px;
 }
 
@@ -554,6 +646,7 @@ img {
     padding: 14px;
 
     border: 1px solid #555;
+
     border-radius: 6px;
 
     background: rgba(255, 255, 255, 0.08);
@@ -585,24 +678,31 @@ img {
     color: #2b1c16;
 
     border: none;
+
     border-radius: 6px;
 
     font-size: 16px;
 
     cursor: pointer;
+
+    transition: 0.3s;
 }
 
 .auth-box button:hover {
     background-color: #c5ae8c;
+
+    transform: translateY(-2px);
 }
 
 .auth-box p {
     margin-top: 25px;
+
     color: #aaa;
 }
 
 .auth-box p a {
     color: #d8c4a6;
+
     text-decoration: none;
 }
 
@@ -649,6 +749,7 @@ img {
 
 .auth-login:hover {
     background-color: #2b1c16;
+
     color: #d8c4a6 !important;
 }
 
@@ -689,11 +790,13 @@ img {
     position: absolute;
 
     right: 4%;
+
     top: 150%;
 
     transform: translateY(-50%);
 
     display: flex;
+
     flex-direction: column;
 
     gap: 6px;
@@ -723,6 +826,7 @@ body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page)
     position: fixed !important;
 
     right: 4% !important;
+
     top: 20px !important;
 
     transform: none !important;
@@ -769,6 +873,7 @@ body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page)
     color: #d8c4a6;
 
     font-size: 11px;
+
     font-weight: 600;
 
     letter-spacing: 4px;
@@ -779,7 +884,10 @@ body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page)
 
     color: #f1e7d8;
 
-    font-family: "Segoe Script", "Brush Script MT", cursive;
+    font-family:
+        "Segoe Script",
+        "Brush Script MT",
+        cursive;
 
     font-size: clamp(45px, 5vw, 72px);
 
@@ -824,11 +932,13 @@ body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page)
 
 .collection-link:hover {
     color: #fff;
+
     border-color: #fff;
 }
 
 .collection-intro-image {
     width: 100%;
+
     height: 500px;
 
     overflow: hidden;
@@ -836,6 +946,7 @@ body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page)
 
 .collection-intro-image img {
     width: 100%;
+
     height: 100%;
 
     display: block;
@@ -896,7 +1007,10 @@ body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page)
 
     color: #f1e7d8;
 
-    font-family: "Segoe Script", "Brush Script MT", cursive;
+    font-family:
+        "Segoe Script",
+        "Brush Script MT",
+        cursive;
 
     font-size: clamp(55px, 7vw, 90px);
 
@@ -980,6 +1094,7 @@ body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page)
 
 .category-image img {
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -999,7 +1114,9 @@ body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page)
     z-index: 2;
 
     left: 35px;
+
     right: 35px;
+
     bottom: 30px;
 }
 
@@ -1060,14 +1177,756 @@ body.contacts-page {
 
 
 /* =========================================================
+   КАТАЛОГ
+========================================================= */
+
+.catalog {
+    width: 100%;
+
+    min-height: calc(100vh - 120px);
+
+    padding: 100px 8%;
+
+    background: transparent;
+}
+
+.catalog-header {
+    max-width: 700px;
+
+    margin-bottom: 60px;
+}
+
+.catalog-header .section-label {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #d8c4a6;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+.catalog-header h1 {
+    margin: 0 0 25px;
+
+    color: #f1e7d8;
+
+    font-family:
+        "Segoe Script",
+        "Brush Script MT",
+        cursive;
+
+    font-size: clamp(55px, 7vw, 90px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: 2px;
+}
+
+.catalog-header p {
+    max-width: 520px;
+
+    color: #bdb3a7;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+.catalog-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+    width: 100%;
+}
+
+.product-card {
+    overflow: hidden;
+
+    background: #181513;
+
+    border: 1px solid rgba(216, 196, 166, 0.18);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(216, 196, 166, 0.6);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+.product-image {
+    width: 100%;
+
+    height: 360px;
+
+    overflow: hidden;
+
+    background: #222;
+}
+
+.product-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-category {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #d8c4a6;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+.product-info h2 {
+    margin: 0 0 12px;
+
+    color: #f1e7d8;
+
+    font-size: 24px;
+
+    font-weight: 400;
+}
+
+.product-info p {
+    min-height: 48px;
+
+    margin: 0 0 25px;
+
+    color: #a9a099;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.product-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.product-price {
+    color: #d8c4a6;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.add-to-cart {
+    padding: 10px 16px;
+
+    color: #17120f;
+
+    background: #d8c4a6;
+
+    border: 1px solid #d8c4a6;
+
+    border-radius: 3px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.add-to-cart:hover {
+    color: #d8c4a6;
+
+    background: transparent;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ФОН КАТАЛОГУ
+========================================================= */
+
+body.catalog-page {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url("/static/images/photo%2016.jpg") center / cover no-repeat fixed;
+}
+
+
+/* =========================================================
+   КОШИК — ОСНОВНИЙ ДИЗАЙН
+========================================================= */
+
+body.cart-page {
+    background:
+        linear-gradient(
+            rgba(8, 7, 6, 0.72),
+            rgba(8, 7, 6, 0.88)
+        ),
+        url("/static/images/photo%2016.jpg") center / cover no-repeat fixed;
+}
+
+
+/* =========================================================
+   КОНТЕЙНЕР КОШИКА
+========================================================= */
+
+.cart {
+    width: 100%;
+
+    max-width: 1200px;
+
+    min-height: calc(100vh - 120px);
+
+    margin: 0 auto;
+
+    padding: 100px 30px 120px;
+}
+
+
+/* =========================================================
+   ЗАГОЛОВОК КОШИКА
+========================================================= */
+
+.cart-header {
+    margin-bottom: 55px;
+}
+
+.cart-header .section-label {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #d8c4a6;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+.cart-header h1 {
+    margin: 0;
+
+    color: #f1e7d8;
+
+    font-family:
+        "Segoe Script",
+        "Brush Script MT",
+        cursive;
+
+    font-size: clamp(55px, 7vw, 90px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: 2px;
+
+    text-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+}
+
+
+/* =========================================================
+   СПИСОК ТОВАРІВ
+========================================================= */
+
+.cart-items {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   ОКРЕМИЙ ТОВАР
+========================================================= */
+
+.cart-item {
+    width: 100%;
+
+    min-height: 110px;
+
+    padding: 25px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(30, 25, 21, 0.94),
+            rgba(18, 15, 13, 0.94)
+        );
+
+    border: 1px solid rgba(216, 196, 166, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.cart-item:hover {
+    transform: translateX(4px);
+
+    border-color: rgba(216, 196, 166, 0.5);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(38, 31, 26, 0.96),
+            rgba(20, 17, 14, 0.96)
+        );
+}
+
+
+/* =========================================================
+   ІНФОРМАЦІЯ ПРО ТОВАР
+========================================================= */
+
+.cart-item-info {
+    min-width: 0;
+
+    flex: 1;
+}
+
+.cart-item-category {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #d8c4a6;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+.cart-item-info h2 {
+    margin: 0;
+
+    color: #f1e7d8;
+
+    font-size: 23px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   ПРАВА ЧАСТИНА
+========================================================= */
+
+.cart-item-price {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 25px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   КІЛЬКІСТЬ
+========================================================= */
+
+.cart-quantity {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.cart-quantity form {
+    margin: 0;
+}
+
+.cart-quantity button {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    color: #d8c4a6;
+
+    background: transparent;
+
+    border: 1px solid rgba(216, 196, 166, 0.45);
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    font-weight: 300;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.cart-quantity button:hover {
+    color: #17120f;
+
+    background: #d8c4a6;
+
+    border-color: #d8c4a6;
+
+    transform: none;
+}
+
+.cart-quantity span {
+    min-width: 28px;
+
+    text-align: center;
+
+    color: #f1e7d8;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ЦІНА ТОВАРУ
+========================================================= */
+
+.cart-item-total {
+    min-width: 110px;
+
+    color: #d8c4a6;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    text-align: right;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   КНОПКА ВИДАЛЕННЯ
+========================================================= */
+
+.cart-item-price form:last-child button {
+    padding: 9px 13px;
+
+    color: #9b8d80;
+
+    background: transparent;
+
+    border: 1px solid rgba(155, 141, 128, 0.35);
+
+    border-radius: 3px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.cart-item-price form:last-child button:hover {
+    color: #e6d5bd;
+
+    background: rgba(216, 196, 166, 0.08);
+
+    border-color: rgba(216, 196, 166, 0.6);
+
+    transform: none;
+}
+
+
+/* =========================================================
+   ЗАГАЛЬНА СУМА
+========================================================= */
+
+.cart-total {
+    width: 100%;
+
+    margin-top: 35px;
+
+    padding: 28px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(216, 196, 166, 0.08),
+            rgba(0, 0, 0, 0.25)
+        );
+
+    border-top: 1px solid rgba(216, 196, 166, 0.5);
+
+    border-bottom: 1px solid rgba(216, 196, 166, 0.18);
+}
+
+.cart-total span {
+    color: #bdb3a7;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.cart-total strong {
+    color: #f1e7d8;
+
+    font-size: 28px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   ДІЇ КОШИКА
+========================================================= */
+
+.cart-actions {
+    margin-top: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.cart-continue {
+    display: inline-flex;
+
+    align-items: center;
+
+    color: #d8c4a6;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid rgba(216, 196, 166, 0.5);
+
+    transition: 0.3s;
+}
+
+.cart-continue:hover {
+    color: #fff;
+
+    border-color: #fff;
+
+    transform: translateX(-4px);
+}
+
+.cart-actions form {
+    margin: 0;
+}
+
+.cart-actions button {
+    padding: 13px 20px;
+
+    color: #9b8d80;
+
+    background: transparent;
+
+    border: 1px solid rgba(155, 141, 128, 0.4);
+
+    border-radius: 3px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.cart-actions button:hover {
+    color: #d8c4a6;
+
+    border-color: rgba(216, 196, 166, 0.65);
+
+    background: rgba(216, 196, 166, 0.06);
+
+    transform: none;
+}
+
+
+/* =========================================================
+   ПОРОЖНІЙ КОШИК
+========================================================= */
+
+.empty-cart {
+    max-width: 650px;
+
+    margin: 80px auto 0;
+
+    padding: 70px 40px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(30, 25, 21, 0.92),
+            rgba(15, 13, 11, 0.94)
+        );
+
+    border: 1px solid rgba(216, 196, 166, 0.25);
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.empty-cart h2 {
+    margin-bottom: 18px;
+
+    color: #f1e7d8;
+
+    font-family:
+        "Segoe Script",
+        "Brush Script MT",
+        cursive;
+
+    font-size: 42px;
+
+    font-weight: 400;
+}
+
+.empty-cart p {
+    max-width: 450px;
+
+    margin: 0 auto 30px;
+
+    color: #a9a099;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
    МОБІЛЬНА ВЕРСІЯ
 ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
 
 @media (max-width: 768px) {
 
     html,
     body {
         width: 100%;
+
         overflow-x: hidden;
     }
 
@@ -1156,6 +2015,7 @@ body.contacts-page {
 
     .cart-link {
         width: 40px;
+
         height: 40px;
     }
 
@@ -1180,6 +2040,7 @@ body.contacts-page {
 
     .site-search:focus-within input {
         width: 100%;
+
         min-width: 0;
     }
 
@@ -1333,7 +2194,9 @@ body.contacts-page {
 
     .category-info {
         left: 22px;
+
         right: 22px;
+
         bottom: 22px;
     }
 
@@ -1353,6 +2216,63 @@ body.contacts-page {
         font-size: 10px;
 
         letter-spacing: 1.5px;
+    }
+
+
+    /* ---------- КАТАЛОГ ---------- */
+
+    .catalog {
+        padding: 70px 20px;
+    }
+
+    .catalog-header {
+        margin-bottom: 45px;
+    }
+
+    .catalog-header h1 {
+        font-size: 55px;
+    }
+
+    .catalog-header p {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    .product-image {
+        height: 380px;
+    }
+
+    .product-info {
+        padding: 22px;
+    }
+
+    .product-info h2 {
+        font-size: 23px;
+    }
+
+    .product-info p {
+        min-height: auto;
+
+        margin-bottom: 22px;
+    }
+
+    .product-bottom {
+        align-items: center;
+    }
+
+    .add-to-cart {
+        padding: 11px 18px;
     }
 
 
@@ -1384,6 +2304,7 @@ body.contacts-page {
         position: relative;
 
         top: auto !important;
+
         right: auto !important;
 
         transform: none !important;
@@ -1400,6 +2321,7 @@ body.contacts-page {
         position: relative !important;
 
         top: auto !important;
+
         right: auto !important;
 
         width: calc(100% - 30px);
@@ -1407,6 +2329,155 @@ body.contacts-page {
         min-height: auto;
 
         margin: 20px auto;
+    }
+
+
+    /* =====================================================
+       КОШИК — МОБІЛЬНА ВЕРСІЯ
+    ===================================================== */
+
+    body.cart-page {
+        background-attachment: scroll;
+
+        background-position: center;
+    }
+
+    .cart {
+        min-height: auto;
+
+        padding: 65px 15px 80px;
+    }
+
+    .cart-header {
+        margin-bottom: 40px;
+    }
+
+    .cart-header .section-label {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 16px;
+    }
+
+    .cart-header h1 {
+        font-size: 55px;
+    }
+
+    .cart-items {
+        gap: 10px;
+    }
+
+    .cart-item {
+        min-height: auto;
+
+        padding: 20px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 20px;
+    }
+
+    .cart-item:hover {
+        transform: none;
+    }
+
+    .cart-item-info h2 {
+        font-size: 21px;
+    }
+
+    .cart-item-price {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: auto 1fr auto;
+
+        align-items: center;
+
+        gap: 12px;
+    }
+
+    .cart-quantity {
+        justify-content: flex-start;
+    }
+
+    .cart-item-total {
+        min-width: 0;
+
+        text-align: right;
+
+        font-size: 17px;
+    }
+
+    .cart-item-price form:last-child {
+        margin: 0;
+    }
+
+    .cart-item-price form:last-child button {
+        padding: 8px 10px;
+
+        font-size: 9px;
+    }
+
+    .cart-total {
+        margin-top: 25px;
+
+        padding: 22px 20px;
+    }
+
+    .cart-total span {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+    .cart-total strong {
+        font-size: 23px;
+    }
+
+    .cart-actions {
+        margin-top: 25px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 18px;
+    }
+
+    .cart-continue {
+        justify-content: center;
+
+        width: 100%;
+    }
+
+    .cart-actions form {
+        width: 100%;
+    }
+
+    .cart-actions button {
+        width: 100%;
+    }
+
+    .empty-cart {
+        margin-top: 45px;
+
+        padding: 50px 20px;
+    }
+
+    .empty-cart h2 {
+        font-size: 34px;
+    }
+
+    .empty-cart p {
+        font-size: 13px;
     }
 }
 
@@ -1458,4 +2529,1081 @@ body.contacts-page {
     .category-card {
         min-height: 300px;
     }
+
+    /* ---------- КОШИК ---------- */
+
+    .cart {
+        padding: 55px 12px 70px;
+    }
+
+    .cart-header h1 {
+        font-size: 48px;
+    }
+
+    .cart-item {
+        padding: 18px;
+    }
+
+    .cart-item-info h2 {
+        font-size: 19px;
+    }
+
+    .cart-item-price {
+        grid-template-columns: auto 1fr;
+
+        gap: 15px;
+    }
+
+    .cart-item-total {
+        grid-column: 2;
+
+        grid-row: 1;
+
+        font-size: 16px;
+    }
+
+    .cart-item-price form:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .cart-item-price form:last-child button {
+        width: 100%;
+    }
+
+    .cart-total {
+        padding: 20px 18px;
+    }
+
+    .cart-total strong {
+        font-size: 21px;
+    }
+
+    .empty-cart {
+        padding: 45px 18px;
+    }
+
+    .empty-cart h2 {
+        font-size: 30px;
+    }
+}
+
+
+/* =========================================================
+   ФОН КАТАЛОГУ НА МОБІЛЬНОМУ
+========================================================= */
+
+@media (max-width: 768px) {
+
+    body.catalog-page {
+        background-attachment: scroll;
+
+        background-position: center;
+
+        background-size: cover;
+
+        background-repeat: no-repeat;
+    }
+
+}
+
+/* =========================================================
+   КОШИК — ФОН
+========================================================= */
+
+body.cart-page {
+    background:
+        url("/static/images/photo%2017.jpg") center / cover no-repeat fixed;
+}
+
+/* =========================================================
+   КНОПКА — ОФОРМИТИ ЗАМОВЛЕННЯ
+========================================================= */
+
+.checkout-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    min-width: 240px;
+    padding: 16px 28px;
+
+    color: #d8c4a6;
+    background: #17120f;
+
+    border: 1px solid #d8c4a6;
+    border-radius: 2px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+
+    cursor: pointer;
+
+    transition: all 0.35s ease;
+}
+
+.checkout-button::after {
+    content: "→";
+
+    font-size: 18px;
+
+    transition: transform 0.35s ease;
+}
+
+.checkout-button:hover {
+    color: #17120f;
+    background: #d8c4a6;
+    border-color: #d8c4a6;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.checkout-button:hover::after {
+    transform: translateX(6px);
+}
+
+/* =========================================================
+   КНОПКА — ОЧИСТИТИ КОШИК
+========================================================= */
+
+.cart-actions form button {
+    padding: 14px 24px;
+
+    color: #000;
+    background: transparent;
+
+    border: 1px solid #000;
+    border-radius: 2px;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.cart-actions form button:hover {
+    color: #fff;
+    background: #000;
+
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   ОФОРМЛЕННЯ ЗАМОВЛЕННЯ — ФОН
+========================================================= */
+
+body.checkout-page {
+    background:
+        url("/static/images/photo%2018.jpg") center / cover no-repeat fixed;
+}
+
+/* =========================================================
+   ОФОРМЛЕННЯ ЗАМОВЛЕННЯ — ГОЛОВНИЙ БЛОК
+========================================================= */
+
+.checkout {
+    width: 100%;
+    min-height: calc(100vh - 120px);
+
+    padding: 90px 8%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkout-header {
+    width: 100%;
+    max-width: 900px;
+
+    margin-bottom: 45px;
+
+    text-align: center;
+}
+
+.checkout-header .section-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #d8c4a6;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.checkout-header h1 {
+    margin: 0;
+
+    color: #f1e7d8;
+
+    font-family: "Segoe Script", "Brush Script MT", cursive;
+
+    font-size: clamp(50px, 6vw, 80px);
+
+    font-weight: 400;
+    line-height: 1;
+
+    text-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+}
+
+.checkout-box {
+    width: 100%;
+    max-width: 900px;
+
+    padding: 45px;
+
+    background: rgba(15, 12, 10, 0.88);
+
+    border: 1px solid rgba(216, 196, 166, 0.35);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.55);
+
+    border-radius: 4px;
+}
+
+/* =========================================================
+   ОФОРМЛЕННЯ ЗАМОВЛЕННЯ — ДАНІ КЛІЄНТА
+========================================================= */
+
+.checkout-section {
+    margin-bottom: 40px;
+}
+
+.checkout-section h2 {
+    margin-bottom: 25px;
+
+    color: #f1e7d8;
+
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.checkout-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.checkout-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.checkout-form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.checkout-form-group label {
+    color: #d8c4a6;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.checkout-form-group input,
+.checkout-form-group textarea,
+.checkout-form-group select {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    color: #f1e7d8;
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(216, 196, 166, 0.25);
+    border-radius: 2px;
+
+    outline: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    transition: all 0.3s ease;
+}
+
+.checkout-form-group input:focus,
+.checkout-form-group textarea:focus,
+.checkout-form-group select:focus {
+    border-color: #d8c4a6;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.checkout-form-group input::placeholder,
+.checkout-form-group textarea::placeholder {
+    color: #777;
+}
+
+.checkout-form-group textarea {
+    min-height: 110px;
+
+    resize: vertical;
+}
+
+@media (max-width: 768px) {
+
+    .checkout {
+        padding: 60px 15px;
+    }
+
+    .checkout-header {
+        margin-bottom: 30px;
+    }
+
+    .checkout-header h1 {
+        font-size: 52px;
+    }
+
+    .checkout-box {
+        padding: 25px 20px;
+    }
+
+    .checkout-form {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .checkout-form-group.full-width {
+        grid-column: auto;
+    }
+
+    .checkout-section h2 {
+        font-size: 21px;
+    }
+}
+
+/* =========================================================
+   ОФОРМЛЕННЯ ЗАМОВЛЕННЯ — ДОСТАВКА ТА ОПЛАТА
+========================================================= */
+
+.checkout-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    margin-top: 10px;
+}
+
+.checkout-option-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-option-group h3 {
+    margin-bottom: 18px;
+
+    color: #f1e7d8;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    letter-spacing: 1px;
+}
+
+.checkout-option {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 52px;
+
+    margin-bottom: 10px;
+    padding: 0 16px;
+
+    color: #d8c4a6;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(216, 196, 166, 0.22);
+    border-radius: 2px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.checkout-option:hover {
+    background: rgba(216, 196, 166, 0.08);
+
+    border-color: rgba(216, 196, 166, 0.55);
+}
+
+.checkout-option input {
+    position: absolute;
+
+    opacity: 0;
+}
+
+.checkout-option span {
+    position: relative;
+
+    padding-left: 28px;
+
+    color: #d8c4a6;
+
+    font-size: 13px;
+}
+
+.checkout-option span::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    width: 14px;
+    height: 14px;
+
+    transform: translateY(-50%);
+
+    border: 1px solid rgba(216, 196, 166, 0.6);
+
+    border-radius: 50%;
+}
+
+.checkout-option input:checked + span::before {
+    background: #d8c4a6;
+
+    border-color: #d8c4a6;
+
+    box-shadow: inset 0 0 0 3px #17120f;
+}
+
+.checkout-option:has(input:checked) {
+    background: rgba(216, 196, 166, 0.10);
+
+    border-color: #d8c4a6;
+}
+
+@media (max-width: 768px) {
+
+    .checkout-options {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .checkout-option {
+        min-height: 50px;
+    }
+}
+
+/* =========================================================
+   ОФОРМЛЕННЯ ЗАМОВЛЕННЯ — ДОСТАВКА ТА ОПЛАТА
+========================================================= */
+
+.checkout-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+
+/* ---------- БЛОК ОПЦІЙ ---------- */
+
+.checkout-option-group {
+    padding: 25px;
+
+    background: rgba(10, 8, 7, 0.72);
+
+    border: 1px solid rgba(216, 196, 166, 0.25);
+    border-radius: 6px;
+
+    backdrop-filter: blur(5px);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.checkout-option-group:hover {
+    border-color: rgba(216, 196, 166, 0.5);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ---------- ЗАГОЛОВОК ---------- */
+
+.checkout-option-group h3 {
+    margin: 0 0 20px;
+
+    color: #d8c4a6;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+/* ---------- ОКРЕМИЙ ВАРІАНТ ---------- */
+
+.checkout-option {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    min-height: 52px;
+
+    margin-bottom: 10px;
+    padding: 14px 16px;
+
+    color: #e8dfd4;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid rgba(216, 196, 166, 0.18);
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.checkout-option:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------- ХОВЕР ---------- */
+
+.checkout-option:hover {
+    background: rgba(216, 196, 166, 0.08);
+
+    border-color: rgba(216, 196, 166, 0.45);
+
+    transform: translateX(3px);
+}
+
+
+/* ---------- РАДІО ---------- */
+
+.checkout-option input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* ---------- ВЛАСНЕ КОЛО ---------- */
+
+.checkout-option span {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    padding-left: 30px;
+
+    color: #ddd3c6;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+}
+
+.checkout-option span::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    width: 17px;
+    height: 17px;
+
+    border: 1px solid rgba(216, 196, 166, 0.55);
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* ---------- АКТИВНИЙ ВАРІАНТ ---------- */
+
+.checkout-option input:checked + span::before {
+    border-color: #d8c4a6;
+
+    background: #d8c4a6;
+
+    box-shadow:
+        inset 0 0 0 4px #17120f,
+        0 0 12px rgba(216, 196, 166, 0.25);
+}
+
+.checkout-option:has(input:checked) {
+    background: rgba(216, 196, 166, 0.09);
+
+    border-color: rgba(216, 196, 166, 0.65);
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.25);
+}
+
+.checkout-option:has(input:checked) span {
+    color: #f1e7d8;
+}
+
+
+/* =========================================================
+   ЗАГАЛЬНИЙ БЛОК CHECKOUT
+========================================================= */
+
+.checkout {
+    width: 100%;
+
+    min-height: calc(100vh - 120px);
+
+    padding: 90px 8%;
+}
+
+
+/* ---------- ЗАГОЛОВОК ---------- */
+
+.checkout-header {
+    max-width: 750px;
+
+    margin-bottom: 60px;
+}
+
+.checkout-header .section-label {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #d8c4a6;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+.checkout-header h1 {
+    margin: 0 0 20px;
+
+    color: #f1e7d8;
+
+    font-family:
+        "Segoe Script",
+        "Brush Script MT",
+        cursive;
+
+    font-size: clamp(50px, 6vw, 82px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+}
+
+.checkout-header p {
+    color: #bdb3a7;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   КОНТЕНТ
+========================================================= */
+
+.checkout-content {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.8fr);
+
+    gap: 50px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   ФОРМА
+========================================================= */
+
+.checkout-form {
+    padding: 35px;
+
+    background: rgba(8, 7, 6, 0.72);
+
+    border: 1px solid rgba(216, 196, 166, 0.22);
+
+    border-radius: 6px;
+
+    backdrop-filter: blur(5px);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.checkout-form h2 {
+    margin-bottom: 30px;
+
+    color: #f1e7d8;
+
+    font-size: 25px;
+
+    font-weight: 400;
+}
+
+
+/* ---------- ПОЛЯ ---------- */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #d8c4a6;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    color: #f1e7d8;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(216, 196, 166, 0.22);
+
+    border-radius: 4px;
+
+    outline: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 110px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    background: rgba(255, 255, 255, 0.07);
+
+    border-color: rgba(216, 196, 166, 0.7);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #77716b;
+}
+
+
+/* =========================================================
+   КНОПКА ПІДТВЕРДЖЕННЯ
+========================================================= */
+
+.checkout-submit {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 16px 25px;
+
+    color: #17120f;
+
+    background: #d8c4a6;
+
+    border: 1px solid #d8c4a6;
+
+    border-radius: 3px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.checkout-submit:hover {
+    color: #d8c4a6;
+
+    background: transparent;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ПІДСУМОК ЗАМОВЛЕННЯ
+========================================================= */
+
+.checkout-summary {
+    position: sticky;
+
+    top: 30px;
+
+    padding: 30px;
+
+    background: rgba(8, 7, 6, 0.78);
+
+    border: 1px solid rgba(216, 196, 166, 0.25);
+
+    border-radius: 6px;
+
+    backdrop-filter: blur(5px);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.checkout-summary h2 {
+    margin-bottom: 25px;
+
+    color: #f1e7d8;
+
+    font-size: 24px;
+
+    font-weight: 400;
+}
+
+
+/* ---------- ТОВАР ---------- */
+
+.checkout-item {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid rgba(216, 196, 166, 0.12);
+}
+
+.checkout-item-name {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.checkout-item-name span {
+    color: #e6dcd0;
+
+    font-size: 14px;
+}
+
+.checkout-item-name small {
+    color: #8e8780;
+
+    font-size: 12px;
+}
+
+.checkout-item strong {
+    color: #d8c4a6;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+
+/* ---------- ЗАГАЛЬНА СУМА ---------- */
+
+.checkout-total {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 20px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(216, 196, 166, 0.3);
+}
+
+.checkout-total span {
+    color: #bdb3a7;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+.checkout-total strong {
+    color: #f1e7d8;
+
+    font-size: 22px;
+}
+
+
+/* ---------- НАЗАД ---------- */
+
+.checkout-back {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: #d8c4a6;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s;
+}
+
+.checkout-back:hover {
+    color: #fff;
+
+    transform: translateX(-3px);
+}
+
+
+/* =========================================================
+   МОБІЛЬНА ВЕРСІЯ
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .checkout {
+        padding: 70px 20px;
+    }
+
+    .checkout-content {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .checkout-summary {
+        position: relative;
+
+        top: auto;
+
+        order: -1;
+    }
+
+    .checkout-options {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .checkout {
+        padding: 55px 15px;
+    }
+
+    .checkout-header {
+        margin-bottom: 40px;
+    }
+
+    .checkout-header h1 {
+        font-size: 48px;
+    }
+
+    .checkout-header p {
+        font-size: 14px;
+    }
+
+    .checkout-form {
+        padding: 22px 18px;
+    }
+
+    .checkout-summary {
+        padding: 22px 18px;
+    }
+
+    .checkout-option-group {
+        padding: 20px 16px;
+    }
+
+    .checkout-option {
+        min-height: 50px;
+
+        padding: 12px;
+    }
+
+    .checkout-option span {
+        font-size: 13px;
+    }
+
 }
