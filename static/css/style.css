@@ -1,4 +1,6 @@
-/* ===== ОСНОВНІ НАЛАШТУВАННЯ ===== */
+/* =========================================================
+   ОСНОВНІ НАЛАШТУВАННЯ
+========================================================= */
 
 * {
     margin: 0;
@@ -6,28 +8,42 @@
     box-sizing: border-box;
 }
 
+html {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
+    min-height: 100vh;
+    width: 100%;
     color: white;
     font-family: Arial, sans-serif;
     background: #111;
+    overflow-x: hidden;
 }
-
-
 
 body > * {
     position: relative;
     z-index: 1;
 }
 
+img {
+    max-width: 100%;
+}
 
-/* ===== ШАПКА ===== */
+
+/* =========================================================
+   ШАПКА
+========================================================= */
 
 .main-header {
     margin-top: 40px;
     width: 100%;
     min-height: 80px;
     padding: 15px 5%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,6 +66,7 @@ body > * {
     font-size: 22px;
     font-weight: bold;
     letter-spacing: 4px;
+    white-space: nowrap;
 }
 
 .main-nav {
@@ -64,6 +81,7 @@ body > * {
     text-decoration: none;
     font-size: 15px;
     transition: 0.3s;
+    white-space: nowrap;
 }
 
 .main-nav a:hover {
@@ -79,10 +97,10 @@ body > * {
     flex-shrink: 0;
 }
 
-.header-actions .site-search {
-    width: 42px;
-    flex-shrink: 0;
-}
+
+/* =========================================================
+   ОСОБИСТИЙ КАБІНЕТ
+========================================================= */
 
 .cabinet-link {
     color: #d8c4a6;
@@ -91,6 +109,7 @@ body > * {
     white-space: nowrap;
 
     padding: 10px 15px;
+
     border: 1px solid rgba(216, 196, 166, 0.5);
     border-radius: 5px;
 
@@ -103,482 +122,26 @@ body > * {
 }
 
 
-/* ===== ГОЛОВНА ===== */
-
-.hero {
-    position: relative;
-    min-height: calc(100vh - 120px);
-    padding: 100px 8%;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.82) 0%,
-            rgba(0, 0, 0, 0.55) 45%,
-            rgba(0, 0, 0, 0.15) 100%
-        ),
-        url("/static/images/photo%205.jpg") center / cover no-repeat;
-}
-
-.hero-text {
-    max-width: 700px;
-}
-
-.hero .subtitle {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-
-    color: #d8c4a6;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 3.5px;
-    text-transform: uppercase;
-
-    margin-bottom: 28px;
-    padding-bottom: 10px;
-
-    border-bottom: 1px solid rgba(216, 196, 166, 0.45);
-
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-}
-
-.hero h1 {
-    color: #f1e7d8;
-    font-family: "Segoe Script", "Brush Script MT", cursive;
-    font-size: clamp(64px, 7vw, 105px);
-    font-weight: 400;
-    line-height: 0.9;
-    letter-spacing: 3px;
-    margin-bottom: 35px;
-
-    text-shadow:
-        0 2px 2px rgba(0, 0, 0, 0.8),
-        0 8px 25px rgba(0, 0, 0, 0.9);
-}
-
-.hero .description {
-    max-width: 520px;
-    color: #e3d7c7;
-    font-size: 17px;
-    line-height: 1.8;
-    letter-spacing: 0.3px;
-    margin-bottom: 35px;
-
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-}
-
-.hero .description span {
-    display: inline;
-    padding-bottom: 0;
-}
-
-
-
-.hero-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-
-    padding: 16px 28px;
-
-    color: #f1e7d8;
-    background: rgba(216, 196, 166, 0.08);
-
-    border: 1px solid rgba(216, 196, 166, 0.7);
-    border-radius: 2px;
-
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-size: 12px;
-    font-weight: 600;
-
-    transition: all 0.35s ease;
-}
-
-.hero-button::after {
-    content: "→";
-    font-size: 18px;
-    transition: transform 0.35s ease;
-}
-
-.hero-button:hover {
-    background: #d8c4a6;
-    color: #17120f;
-    border-color: #d8c4a6;
-    transform: translateY(-2px);
-}
-
-.hero-button:hover::after {
-    transform: translateX(5px);
-}
-
-.hero-button:hover {
-    background: transparent;
-    color: #d8c4a6;
-    transform: translateY(-2px);
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.25),
-            transparent 40%,
-            rgba(0, 0, 0, 0.5)
-        );
-    pointer-events: none;
-}
-
-.hero-scroll {
-    display: none;
-}
-
-.scroll-line {
-    display: none;
-}
-
-/* ===== ПОШУК ===== */
-
-.site-search {
-    width: 430px;
-    display: flex;
-    align-items: center;
-    background-color: hwb(82 23% 67%);
-    transition: background-color 0.2s;
-}
-
-.site-search:hover,
-.site-search:focus-within {
-    background-color: #343434;
-}
-
-.search-submit {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 8px 10px 12px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.search-submit:hover {
-    background: transparent;
-    transform: none;
-}
-
-.search-submit svg {
-    width: 22px;
-    height: 22px;
-    fill: none;
-    stroke: #fff;
-    stroke-width: 2;
-}
-
-.site-search input {
-    flex: 1;
-    padding: 10px 12px 10px 4px;
-    color: white;
-    font-size: 14px;
-    background: transparent;
-    border: none;
-    outline: none;
-}
-
-.site-search input::placeholder {
-    color: #9a9a9a;
-}
-
-
-/* ===== ВХІД ТА РЕЄСТРАЦІЯ ===== */
-
-.login-page,
-.register-page {
-    background-color: #111;
-}
-
-.login-page header,
-.register-page header {
-    background-color: transparent;
-}
-
-.auth-box {
-    width: 400px;
-    max-width: 90%;
-    margin: 100px auto;
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.65);
-    border: 1px solid rgba(216, 196, 166, 0.4);
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-}
-
-.auth-box h1 {
-    color: #d8c4a6;
-    font-size: 42px;
-    margin-bottom: 30px;
-}
-
-.auth-box form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.auth-box input {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #555;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.08);
-    color: white;
-    font-size: 16px;
-    outline: none;
-}
-
-.auth-box input:focus {
-    border-color: #d8c4a6;
-}
-
-.auth-box input::placeholder {
-    color: #aaa;
-}
-
-.auth-box button {
-    margin-top: 10px;
-    width: 100%;
-    padding: 14px;
-    background-color: #d8c4a6;
-    color: #2b1c16;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.auth-box button:hover {
-    background-color: #c5ae8c;
-}
-
-.auth-box p {
-    margin-top: 25px;
-    color: #aaa;
-}
-
-.auth-box p a {
-    color: #d8c4a6;
-    text-decoration: none;
-}
-
-.auth-box p a:hover {
-    text-decoration: underline;
-}
-
-
-/* ===== КНОПКИ ВХОДУ / РЕЄСТРАЦІЇ ===== */
-
-.auth-login,
-.auth-register {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    width: 100%;
-    padding: 7px 10px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 13px;
-    transition: 0.3s;
-}
-
-.auth-login {
-    color: #2b1c16 !important;
-    border: 1px solid #2b1c16;
-    background: transparent;
-    margin-bottom: 5px;
-}
-
-.auth-login:hover {
-    background-color: #2b1c16;
-    color: #d8c4a6 !important;
-}
-
-.auth-register {
-    color: #2b1c16 !important;
-    background-color: #d8c4a6;
-    border: 1px solid #d8c4a6;
-}
-
-.auth-register:hover {
-    background-color: #c5ae8c;
-    border-color: #c5ae8c;
-    transform: translateY(-2px);
-}
-
-.auth-login svg,
-.auth-register svg {
-    width: 16px;
-    height: 16px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.8;
-}
-
-
-/* ===== РАМКА ВХОДУ / РЕЄСТРАЦІЇ ===== */
-
-.auth-buttons {
-    position: absolute;
-    right: 4%;
-    top: 150%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    width: 200px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.45);
-    border: 1px solid rgba(216, 196, 166, 0.7);
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.45);
-    z-index: 10;
-}
-
-
-/* Головна сторінка */
-
-body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page) .auth-buttons {
-    top: 120%;
-}
-
-
-/* Про нас + Контакти */
-
-.about-page .auth-buttons,
-.contacts-page .auth-buttons {
-    position: fixed !important;
-    right: 4% !important;
-    top: 20px !important;
-    transform: none !important;
-    width: 215px;
-    min-height: 90px;
-    height: auto;
-    padding: 10px;
-}
-
-
-/* ===== МОБІЛЬНА ВЕРСІЯ ===== */
-
-@media (max-width: 768px) {
-
-    body {
-        background-size: cover;
-        background-position: center;
-        background-attachment: scroll;
-    }
-
-    header {
-        margin-top: 50px !important;
-        padding: 10px 12px;
-        gap: 10px;
-        flex-wrap: nowrap;
-    }
-
-    .site-search {
-        width: 150px;
-        min-width: 0;
-    }
-
-    .site-search input {
-        width: 100%;
-        min-width: 0;
-        font-size: 12px;
-    }
-
-    .search-submit {
-        padding: 8px;
-    }
-
-    .search-submit svg {
-        width: 18px;
-        height: 18px;
-    }
-
-    nav {
-        gap: 10px;
-        flex-shrink: 0;
-    }
-
-    nav a {
-        font-size: 11px;
-        white-space: nowrap;
-    }
-
-    .hero {
-        min-height: calc(100vh - 60px);
-        padding: 50px 20px;
-    }
-
-    .hero-text {
-        max-width: 100%;
-    }
-
-    .hero h1 {
-        font-size: 48px;
-        font-family: "Segoe Script", "Brush Script MT", cursive;
-    }
-
-    .subtitle {
-        font-size: 11px;
-        letter-spacing: 2px;
-    }
-
-    .description {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
-    .auth-box {
-        width: 90%;
-        margin: 70px auto;
-        padding: 30px 20px;
-    }
-
-    .auth-box h1 {
-        font-size: 34px;
-    }
-}
-
-.login-page,
-.register-page {
-    background-image: url("/static/images/photo%204.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-
-/* ===== ПОШУК №4 — РОЗГОРТАННЯ ===== */
+/* =========================================================
+   ПОШУК
+========================================================= */
 
 .site-search {
     width: 42px;
     height: 42px;
+
     display: flex;
     align-items: center;
+
     background: #222;
+
     border: 1px solid #d8c4a6;
     border-radius: 21px;
+
     overflow: hidden;
+
+    flex-shrink: 0;
+
     transition: width 0.35s ease;
 }
 
@@ -588,14 +151,19 @@ body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page) .
 
 .search-submit {
     flex-shrink: 0;
+
     width: 42px;
     height: 42px;
+
     padding: 8px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     background: transparent;
     border: none;
+
     cursor: pointer;
 }
 
@@ -607,6 +175,7 @@ body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page) .
 .search-submit svg {
     width: 21px;
     height: 21px;
+
     fill: none;
     stroke: #d8c4a6;
     stroke-width: 2;
@@ -615,14 +184,22 @@ body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page) .
 .site-search input {
     width: 0;
     min-width: 0;
+
     padding: 0;
+
     color: white;
     font-size: 14px;
+
     background: transparent;
     border: none;
     outline: none;
+
     opacity: 0;
-    transition: opacity 0.25s ease;
+
+    transition:
+        width 0.35s ease,
+        opacity 0.25s ease,
+        padding 0.35s ease;
 }
 
 .site-search:focus-within input {
@@ -635,313 +212,27 @@ body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page) .
     color: #999;
 }
 
-/* ===== НАША КОЛЕКЦІЯ ===== */
 
-.collection-intro {
-    min-height: 650px;
-    padding: 100px 8%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 80px;
-
-    background: #111;
-}
-
-.collection-intro-text {
-    max-width: 560px;
-}
-
-.section-label {
-    display: inline-block;
-    margin-bottom: 25px;
-
-    color: #d8c4a6;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 4px;
-}
-
-.collection-intro h2 {
-    margin-bottom: 30px;
-
-    color: #f1e7d8;
-    font-family: "Segoe Script", "Brush Script MT", cursive;
-    font-size: clamp(45px, 5vw, 72px);
-    font-weight: 400;
-    line-height: 1;
-}
-
-.collection-intro p {
-    max-width: 500px;
-    margin-bottom: 35px;
-
-    color: #bdb3a7;
-    font-size: 17px;
-    line-height: 1.8;
-}
-
-.collection-link {
-    display: inline-block;
-
-    color: #d8c4a6;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 11px;
-    font-weight: 600;
-
-    padding-bottom: 8px;
-    border-bottom: 1px solid rgba(216, 196, 166, 0.6);
-
-    transition: 0.3s;
-}
-
-.collection-link:hover {
-    color: #fff;
-    border-color: #fff;
-}
-
-.collection-intro-image {
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-}
-
-.collection-intro-image img {
-    width: 100%;
-    height: 100%;
-    display: block;
-
-    object-fit: cover;
-
-    transition: transform 0.6s ease;
-}
-
-.collection-intro-image:hover img {
-    transform: scale(1.03);
-}
-
-/* ===== СТОРІНКА КАТЕГОРІЙ ===== */
-
-.categories-page {
-    color: #f1e7d8;
-
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.75)
-        ),
-        url("/static/images/photo%2011.jpg") center / cover no-repeat fixed;
-}
-
-.categories-content {
-    width: 100%;
-    min-height: calc(100vh - 120px);
-    padding: 100px 8%;
-}
-
-/* Заголовок */
-
-.categories-hero {
-    max-width: 750px;
-    margin-bottom: 70px;
-}
-
-.categories-hero .section-label {
-    display: block;
-    color: #d8c4a6;
-    font-size: 12px;
-    letter-spacing: 4px;
-    margin-bottom: 25px;
-}
-
-.categories-hero h1 {
-    margin: 0 0 25px;
-
-    color: #f1e7d8;
-    font-family: "Segoe Script", "Brush Script MT", cursive;
-    font-size: clamp(55px, 7vw, 90px);
-    font-weight: 400;
-    line-height: 0.95;
-    letter-spacing: 2px;
-
-    text-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
-}
-
-.categories-hero p {
-    max-width: 520px;
-
-    color: #bfb3a3;
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-
-/* Категорії */
-
-.categories-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    width: 100%;
-}
-
-.category-card {
-    position: relative;
-    display: block;
-
-    min-height: 420px;
-    overflow: hidden;
-
-    text-decoration: none;
-    background: #1a1715;
-
-    border: 1px solid rgba(216, 196, 166, 0.18);
-
-    transition:
-        transform 0.4s ease,
-        border-color 0.4s ease;
-}
-
-.category-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(216, 196, 166, 0.65);
-}
-
-
-/* Фото */
-
-.category-image {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-}
-
-.category-image::after {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.05) 20%,
-            rgba(0, 0, 0, 0.85) 100%
-        );
-}
-
-.category-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    transition: transform 0.7s ease;
-}
-
-.category-card:hover .category-image img {
-    transform: scale(1.06);
-}
-
-
-/* Інформація на фото */
-
-.category-info {
-    position: absolute;
-    z-index: 2;
-
-    left: 35px;
-    right: 35px;
-    bottom: 30px;
-}
-
-.category-info > span {
-    color: #d8c4a6;
-    font-size: 11px;
-    letter-spacing: 3px;
-}
-
-.category-info h2 {
-    margin: 10px 0 8px;
-
-    color: #f1e7d8;
-    font-size: 38px;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-.category-info p {
-    margin: 0;
-
-    color: #d8c4a6;
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-
-/* ===== МОБІЛЬНА ВЕРСІЯ ===== */
-
-@media (max-width: 768px) {
-
-    .categories-content {
-        padding: 70px 20px;
-    }
-
-    .categories-hero {
-        margin-bottom: 45px;
-    }
-
-    .categories-hero h1 {
-        font-size: 55px;
-    }
-
-    .categories-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .category-card {
-        min-height: 350px;
-    }
-
-    .category-info {
-        left: 25px;
-        right: 25px;
-        bottom: 25px;
-    }
-
-    .category-info h2 {
-        font-size: 32px;
-    }
-}
-
-.categories-page {
-    position: relative;
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.75)
-        ),
-        url("/static/images/photo%2011.jpg") center / cover no-repeat fixed;
-}
-
-/* ===== МОВА ===== */
+/* =========================================================
+   МОВА
+========================================================= */
 
 .language-switcher {
     position: relative;
+    flex-shrink: 0;
 }
 
 .language-button {
     width: auto;
+
     padding: 8px 10px;
+
     background: transparent;
     color: #d8c4a6;
+
     border: 1px solid rgba(216, 196, 166, 0.5);
     border-radius: 5px;
+
     font-size: 12px;
     cursor: pointer;
 }
@@ -953,24 +244,25 @@ body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page) .
 
 .language-menu {
     display: none;
+
     position: absolute;
+
     top: calc(100% + 8px);
     left: 50%;
+
     transform: translateX(-50%);
 
     min-width: 60px;
     padding: 6px;
 
     background: #17120f;
+
     border: 1px solid rgba(216, 196, 166, 0.5);
     border-radius: 6px;
+
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 
     z-index: 100;
-}
-
-.language-menu {
-    display: none;
 }
 
 .language-switcher.open .language-menu {
@@ -980,8 +272,10 @@ body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page) .
 
 .language-menu a {
     padding: 7px 10px;
+
     color: #d8c4a6;
     text-decoration: none;
+
     font-size: 12px;
     text-align: center;
 }
@@ -993,7 +287,9 @@ body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page) .
 }
 
 
-/* ===== КОШИК ===== */
+/* =========================================================
+   КОШИК
+========================================================= */
 
 .cart-link {
     position: relative;
@@ -1010,6 +306,8 @@ body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page) .
 
     border: 1px solid rgba(216, 196, 166, 0.5);
     border-radius: 50%;
+
+    flex-shrink: 0;
 
     transition: 0.3s;
 }
@@ -1052,9 +350,513 @@ body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page) .
     font-weight: bold;
 }
 
-/* ===== ФОНИ СТОРІНОК ===== */
 
-body.categories-page {
+/* =========================================================
+   ГОЛОВНА
+========================================================= */
+
+.hero {
+    position: relative;
+
+    min-height: calc(100vh - 120px);
+
+    padding: 100px 8%;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.82) 0%,
+            rgba(0, 0, 0, 0.55) 45%,
+            rgba(0, 0, 0, 0.15) 100%
+        ),
+        url("/static/images/photo%205.jpg") center / cover no-repeat;
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.hero .subtitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #d8c4a6;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+
+    margin-bottom: 28px;
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid rgba(216, 196, 166, 0.45);
+
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero h1 {
+    color: #f1e7d8;
+
+    font-family: "Segoe Script", "Brush Script MT", cursive;
+
+    font-size: clamp(64px, 7vw, 105px);
+
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: 3px;
+
+    margin-bottom: 35px;
+
+    text-shadow:
+        0 2px 2px rgba(0, 0, 0, 0.8),
+        0 8px 25px rgba(0, 0, 0, 0.9);
+}
+
+.hero .description {
+    max-width: 520px;
+
+    color: #e3d7c7;
+
+    font-size: 17px;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+
+    margin-bottom: 35px;
+
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero .description span {
+    display: inline;
+}
+
+.hero-button {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 14px;
+
+    padding: 16px 28px;
+
+    color: #f1e7d8;
+    background: rgba(216, 196, 166, 0.08);
+
+    border: 1px solid rgba(216, 196, 166, 0.7);
+    border-radius: 2px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    letter-spacing: 2.5px;
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: all 0.35s ease;
+}
+
+.hero-button::after {
+    content: "→";
+
+    font-size: 18px;
+
+    transition: transform 0.35s ease;
+}
+
+.hero-button:hover {
+    background: transparent;
+    color: #d8c4a6;
+
+    transform: translateY(-2px);
+}
+
+.hero-button:hover::after {
+    transform: translateX(5px);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.25),
+            transparent 40%,
+            rgba(0, 0, 0, 0.5)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   ВХІД / РЕЄСТРАЦІЯ
+========================================================= */
+
+.login-page,
+.register-page {
+    background-color: #111;
+
+    background-image: url("/static/images/photo%204.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.login-page header,
+.register-page header {
+    background-color: transparent;
+}
+
+.auth-box {
+    width: 400px;
+    max-width: calc(100% - 30px);
+
+    margin: 100px auto;
+
+    padding: 40px;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    border: 1px solid rgba(216, 196, 166, 0.4);
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.auth-box h1 {
+    color: #d8c4a6;
+
+    font-size: 42px;
+
+    margin-bottom: 30px;
+}
+
+.auth-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-box input {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #555;
+    border-radius: 6px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: white;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.auth-box input:focus {
+    border-color: #d8c4a6;
+}
+
+.auth-box input::placeholder {
+    color: #aaa;
+}
+
+.auth-box button {
+    margin-top: 10px;
+
+    width: 100%;
+
+    padding: 14px;
+
+    background-color: #d8c4a6;
+
+    color: #2b1c16;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.auth-box button:hover {
+    background-color: #c5ae8c;
+}
+
+.auth-box p {
+    margin-top: 25px;
+    color: #aaa;
+}
+
+.auth-box p a {
+    color: #d8c4a6;
+    text-decoration: none;
+}
+
+.auth-box p a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   КНОПКИ ВХОДУ / РЕЄСТРАЦІЇ
+========================================================= */
+
+.auth-login,
+.auth-register {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    width: 100%;
+
+    padding: 7px 10px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.auth-login {
+    color: #2b1c16 !important;
+
+    border: 1px solid #2b1c16;
+
+    background: transparent;
+
+    margin-bottom: 5px;
+}
+
+.auth-login:hover {
+    background-color: #2b1c16;
+    color: #d8c4a6 !important;
+}
+
+.auth-register {
+    color: #2b1c16 !important;
+
+    background-color: #d8c4a6;
+
+    border: 1px solid #d8c4a6;
+}
+
+.auth-register:hover {
+    background-color: #c5ae8c;
+
+    border-color: #c5ae8c;
+
+    transform: translateY(-2px);
+}
+
+.auth-login svg,
+.auth-register svg {
+    width: 16px;
+    height: 16px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+}
+
+
+/* =========================================================
+   РАМКА ВХОДУ / РЕЄСТРАЦІЇ
+========================================================= */
+
+.auth-buttons {
+    position: absolute;
+
+    right: 4%;
+    top: 150%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    width: 200px;
+
+    padding: 10px;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    border: 1px solid rgba(216, 196, 166, 0.7);
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.45);
+
+    z-index: 10;
+}
+
+body:not(.about-page):not(.contacts-page):not(.login-page):not(.register-page)
+.auth-buttons {
+    top: 120%;
+}
+
+.about-page .auth-buttons,
+.contacts-page .auth-buttons {
+    position: fixed !important;
+
+    right: 4% !important;
+    top: 20px !important;
+
+    transform: none !important;
+
+    width: 215px;
+
+    min-height: 90px;
+
+    height: auto;
+
+    padding: 10px;
+}
+
+
+/* =========================================================
+   НАША КОЛЕКЦІЯ
+========================================================= */
+
+.collection-intro {
+    min-height: 650px;
+
+    padding: 100px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 80px;
+
+    background: #111;
+}
+
+.collection-intro-text {
+    max-width: 560px;
+}
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    color: #d8c4a6;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+.collection-intro h2 {
+    margin-bottom: 30px;
+
+    color: #f1e7d8;
+
+    font-family: "Segoe Script", "Brush Script MT", cursive;
+
+    font-size: clamp(45px, 5vw, 72px);
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+.collection-intro p {
+    max-width: 500px;
+
+    margin-bottom: 35px;
+
+    color: #bdb3a7;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+.collection-link {
+    display: inline-block;
+
+    color: #d8c4a6;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid rgba(216, 196, 166, 0.6);
+
+    transition: 0.3s;
+}
+
+.collection-link:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.collection-intro-image {
+    width: 100%;
+    height: 500px;
+
+    overflow: hidden;
+}
+
+.collection-intro-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.collection-intro-image:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   КАТЕГОРІЇ
+========================================================= */
+
+.categories-page {
+    color: #f1e7d8;
+
     background:
         linear-gradient(
             rgba(0, 0, 0, 0.55),
@@ -1062,6 +864,181 @@ body.categories-page {
         ),
         url("/static/images/photo%2011.jpg") center / cover no-repeat fixed;
 }
+
+.categories-content {
+    width: 100%;
+
+    min-height: calc(100vh - 120px);
+
+    padding: 100px 8%;
+}
+
+.categories-hero {
+    max-width: 750px;
+
+    margin-bottom: 70px;
+}
+
+.categories-hero .section-label {
+    display: block;
+
+    color: #d8c4a6;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+}
+
+.categories-hero h1 {
+    margin: 0 0 25px;
+
+    color: #f1e7d8;
+
+    font-family: "Segoe Script", "Brush Script MT", cursive;
+
+    font-size: clamp(55px, 7vw, 90px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: 2px;
+
+    text-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+}
+
+.categories-hero p {
+    max-width: 520px;
+
+    color: #bfb3a3;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+.categories-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+
+    width: 100%;
+}
+
+.category-card {
+    position: relative;
+
+    display: block;
+
+    min-height: 420px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    background: #1a1715;
+
+    border: 1px solid rgba(216, 196, 166, 0.18);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(216, 196, 166, 0.65);
+}
+
+.category-image {
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+}
+
+.category-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.05) 20%,
+            rgba(0, 0, 0, 0.85) 100%
+        );
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition: transform 0.7s ease;
+}
+
+.category-card:hover .category-image img {
+    transform: scale(1.06);
+}
+
+.category-info {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 35px;
+    right: 35px;
+    bottom: 30px;
+}
+
+.category-info > span {
+    color: #d8c4a6;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+.category-info h2 {
+    margin: 10px 0 8px;
+
+    color: #f1e7d8;
+
+    font-size: 38px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+}
+
+.category-info p {
+    margin: 0;
+
+    color: #d8c4a6;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ФОНИ СТОРІНОК
+========================================================= */
 
 body.about-page {
     background:
@@ -1079,4 +1056,406 @@ body.contacts-page {
             rgba(0, 0, 0, 0.65)
         ),
         url("/static/images/photo%203.jpg") center / cover no-repeat fixed;
+}
+
+
+/* =========================================================
+   МОБІЛЬНА ВЕРСІЯ
+========================================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        background-attachment: scroll;
+    }
+
+
+    /* ---------- ШАПКА ---------- */
+
+    .main-header {
+        margin-top: 20px;
+
+        min-height: auto;
+
+        padding: 12px 15px;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+    .brand {
+        width: 100%;
+
+        text-align: center;
+
+        order: 1;
+    }
+
+    .brand a {
+        font-size: 18px;
+
+        letter-spacing: 3px;
+    }
+
+    .main-nav {
+        width: 100%;
+
+        order: 2;
+
+        display: flex;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px 16px;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+    }
+
+    .header-actions {
+        width: 100%;
+
+        order: 3;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 8px;
+
+        flex-wrap: nowrap;
+    }
+
+
+    /* ---------- МОВА ---------- */
+
+    .language-button {
+        height: 40px;
+
+        padding: 7px 9px;
+    }
+
+
+    /* ---------- КОШИК ---------- */
+
+    .cart-link {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    /* ---------- ПОШУК ---------- */
+
+    .site-search {
+        width: 42px;
+
+        height: 42px;
+
+        flex: 0 0 auto;
+    }
+
+    .site-search:focus-within {
+        width: min(220px, 55vw);
+    }
+
+    .site-search input {
+        font-size: 13px;
+    }
+
+    .site-search:focus-within input {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* ---------- КАБІНЕТ ---------- */
+
+    .cabinet-link {
+        max-width: 150px;
+
+        padding: 9px 10px;
+
+        font-size: 11px;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+
+    /* ---------- ГОЛОВНА ---------- */
+
+    .hero {
+        min-height: calc(100vh - 180px);
+
+        padding: 60px 20px;
+
+        align-items: center;
+
+        background-attachment: scroll;
+    }
+
+    .hero-text {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(44px, 14vw, 65px);
+
+        line-height: 0.95;
+
+        letter-spacing: 1px;
+
+        margin-bottom: 25px;
+    }
+
+    .hero .subtitle {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 20px;
+    }
+
+    .hero .description {
+        max-width: 100%;
+
+        font-size: 15px;
+
+        line-height: 1.6;
+
+        margin-bottom: 25px;
+    }
+
+    .hero-button {
+        padding: 14px 20px;
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+
+    /* ---------- КОЛЕКЦІЯ ---------- */
+
+    .collection-intro {
+        min-height: auto;
+
+        padding: 60px 20px;
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .collection-intro h2 {
+        font-size: 48px;
+    }
+
+    .collection-intro p {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    .collection-intro-image {
+        height: 320px;
+    }
+
+
+    /* ---------- КАТЕГОРІЇ ---------- */
+
+    .categories-page {
+        background-attachment: scroll;
+    }
+
+    .categories-content {
+        min-height: auto;
+
+        padding: 55px 15px;
+    }
+
+    .categories-hero {
+        margin-bottom: 35px;
+    }
+
+    .categories-hero .section-label {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 18px;
+    }
+
+    .categories-hero h1 {
+        font-size: clamp(45px, 14vw, 65px);
+
+        margin-bottom: 20px;
+    }
+
+    .categories-hero p {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    .categories-grid {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .category-card {
+        width: 100%;
+
+        min-height: 330px;
+    }
+
+    .category-info {
+        left: 22px;
+        right: 22px;
+        bottom: 22px;
+    }
+
+    .category-info > span {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+    .category-info h2 {
+        font-size: 30px;
+
+        margin: 8px 0;
+    }
+
+    .category-info p {
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    /* ---------- ВХІД / РЕЄСТРАЦІЯ ---------- */
+
+    .login-page,
+    .register-page {
+        background-attachment: scroll;
+    }
+
+    .auth-box {
+        width: calc(100% - 30px);
+
+        margin: 55px auto;
+
+        padding: 30px 20px;
+    }
+
+    .auth-box h1 {
+        font-size: 34px;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* ---------- КНОПКИ ---------- */
+
+    .auth-buttons {
+        position: relative;
+
+        top: auto !important;
+        right: auto !important;
+
+        transform: none !important;
+
+        width: calc(100% - 30px);
+
+        max-width: 320px;
+
+        margin: 20px auto;
+    }
+
+    .about-page .auth-buttons,
+    .contacts-page .auth-buttons {
+        position: relative !important;
+
+        top: auto !important;
+        right: auto !important;
+
+        width: calc(100% - 30px);
+
+        min-height: auto;
+
+        margin: 20px auto;
+    }
+}
+
+
+/* =========================================================
+   ДУЖЕ МАЛЕНЬКІ ЕКРАНИ
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .main-header {
+        padding: 10px;
+    }
+
+    .brand a {
+        font-size: 16px;
+
+        letter-spacing: 2px;
+    }
+
+    .main-nav {
+        gap: 8px 12px;
+    }
+
+    .main-nav a {
+        font-size: 10px;
+    }
+
+    .header-actions {
+        gap: 6px;
+    }
+
+    .cabinet-link {
+        max-width: 125px;
+
+        font-size: 10px;
+
+        padding: 8px;
+    }
+
+    .site-search:focus-within {
+        width: 190px;
+    }
+
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .category-card {
+        min-height: 300px;
+    }
 }
